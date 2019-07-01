@@ -1,0 +1,10 @@
+.micanvas{
+
+margin-left: 20px;
+}
+.imgcanvas{
+  visibility: hidden;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Barriecito&display=swap);
