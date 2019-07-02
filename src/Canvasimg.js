@@ -9,10 +9,22 @@ function Canvasimg() {
   let canvastext, canvastext2, inputfile, filesimg;
 
   // states //
+  const [contorno, setContorno] = useState(true);
+  const [radio, setRadio] = useState("stroke");
   const [valorimg, setValorimg] = useState("");
   const [inputTop, setInputTop] = useState("");
   const [inputBottom, setInputBottom] = useState("");
   const [disparador, setDisparador] = useState(0);
+
+
+  const handleRadio = ()=>{
+
+    console.log("elegist " + radio);
+  }
+
+  const handleChange = (e)=>{
+    setContorno(!contorno);
+  }
 
 
   const handleValorimg = (e)=>{
@@ -20,7 +32,7 @@ function Canvasimg() {
   }
 
   const handleSubmit = (e) =>{
-    e.preventDefault();
+
 
      canvastext = inputTop;
      canvastext2 = inputBottom;
@@ -36,10 +48,7 @@ function Canvasimg() {
     setInputBottom(e.target.value);
   }
 
-  const handleFile = (e) =>{
-    let files = e.target.files[0].name;
-    filesimg = files;
-  }
+
 
   const makeCanvas = () =>{
       let button = document.getElementById('descargarbutton');
@@ -60,15 +69,27 @@ function Canvasimg() {
       ctx.fillStyle = "white";
 
 
+
       if(canvastext){
         // filltext toma 3 parametros, x , y, y tamaño maximo, en este caso especifico que no sobrepase el width.//
         ctx.fillText(canvastext,canvas.width / 2, canvas.width / 10, canvas.width);
-        ctx.strokeText(canvastext,canvas.width / 2, canvas.width / 10, canvas.width);
+
+        if(contorno){
+          ctx.strokeText(canvastext,canvas.width / 2, canvas.width / 10, canvas.width);
+        }else{
+          console.log("no stroke");
+        }
+
 
       }
       if(canvastext2){
         ctx.fillText(canvastext2,canvas.width / 2 , canvas.height - 14 , canvas.width);
-        ctx.strokeText(canvastext2,canvas.width / 2 , canvas.height - 14 , canvas.width);
+        if(contorno){
+          ctx.strokeText(canvastext2,canvas.width / 2 , canvas.height - 14 , canvas.width);
+        }else{
+          console.log("no stroke");
+        }
+
       }
 
 
@@ -77,13 +98,17 @@ function Canvasimg() {
 
   return (
       <div className="canvas">
-        <form onSubmit={handleSubmit}>
-        <input type="file" id="inputfile"  onChange={handleFile} />
+        <form onKeyUp={handleSubmit}>
+
         <input type="text" placeholder="Texto Top" value={inputTop} onChange={handleInputTop}/>
         <input type="text" placeholder="Texto bottom" value={inputBottom} onChange={handleInputBottom} />
         <input type="text" value={valorimg} onChange={handleValorimg} />
 
         <input type="submit" />
+        </form>
+        <h1> input radio </h1>
+        <form onChange={handleRadio}>
+        <input type="checkbox" value={contorno}  onChange={handleChange} />
         </form>
         <img src={`./img/${valorimg}.jpg`} className="memeimg" id="memeimg"/>
         <img src="./img/img_the_scream.jpg" id="imgcanvas" />
