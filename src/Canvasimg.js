@@ -6,7 +6,7 @@ import './css/Canvasimg.css';
 function Canvasimg() {
 
   // declaro las variables a usar dentro de las funciones //
-  let canvastext, canvastext2, inputfile, filesimg;
+  let canvastext, canvastext2, inputfile, filesimg, invisibleinput;
 
   // states //
   const [contorno, setContorno] = useState(true);
@@ -17,9 +17,16 @@ function Canvasimg() {
   const [disparador, setDisparador] = useState(0);
 
 
-  const handleRadio = ()=>{
+  useEffect(()=>{
+    handleSubmit();
+  },[contorno])
 
-    console.log("elegist " + radio);
+  const changeState = ()=>{
+    let invisible = document.getElementById('invisibleinput');
+    invisible.value = "up";
+    console.log(invisible.value);
+    console.log("change");
+
   }
 
   const handleChange = (e)=>{
@@ -51,7 +58,7 @@ function Canvasimg() {
 
 
   const makeCanvas = () =>{
-      let button = document.getElementById('descargarbutton');
+
       let imagen = document.getElementById('memeimg');
       let canvas = document.getElementById('mycanvas');
       let ctx = canvas.getContext("2d");
@@ -59,7 +66,7 @@ function Canvasimg() {
       canvas.width = imagen.width;
       canvas.height = imagen.height;
       ctx.clearRect(10, 0, canvas.width, canvas.height);
-      console.log(filesimg);
+
       ctx.drawImage(imagen, 0, 0);
       let fontSize = canvas.width / 8;
       ctx.font = fontSize + 'px Arial';
@@ -76,6 +83,7 @@ function Canvasimg() {
 
         if(contorno){
           ctx.strokeText(canvastext,canvas.width / 2, canvas.width / 10, canvas.width);
+
         }else{
           console.log("no stroke");
         }
@@ -99,22 +107,23 @@ function Canvasimg() {
   return (
       <div className="canvas">
         <form onKeyUp={handleSubmit}>
-
+        <input type="hidden" value="" id="invisibleinput" />
         <input type="text" placeholder="Texto Top" value={inputTop} onChange={handleInputTop}/>
         <input type="text" placeholder="Texto bottom" value={inputBottom} onChange={handleInputBottom} />
         <input type="text" value={valorimg} onChange={handleValorimg} />
 
-        <input type="submit" />
         </form>
         <h1> input radio </h1>
-        <form onChange={handleRadio}>
-        <input type="checkbox" value={contorno}  onChange={handleChange} />
+        {/* Input checkbox para quitar o poner el contorno en textos de la imagen */}
+        <form onChange={changeState}>
+        <label> contorno </label>
+        <input type="checkbox" checked={contorno} value={contorno}  onChange={handleChange} />
         </form>
         <img src={`./img/${valorimg}.jpg`} className="memeimg" id="memeimg"/>
-        <img src="./img/img_the_scream.jpg" id="imgcanvas" />
+
         <canvas id="mycanvas" className="micanvas" width="240" height="297" />
-        <button onClick={makeCanvas} > Generar </button>
-        <a href="#!" target="_blank" id="descargarbutton"> Descargar </a>
+
+
 
       </div>
   )
