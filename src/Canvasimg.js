@@ -21,9 +21,14 @@ function Canvasimg() {
   const [disparador, setDisparador] = useState(0);
 
 
+  const handleValue = (e) => {
+    passingcolor = e.target.getAttribute('data-value');
+    setColor(passingcolor);
+    console.log("handle",color);
+  }
 
   useEffect(()=>{
-    console.log(passingcolor);
+
     handleSubmit();
   },[contorno])
 
@@ -66,90 +71,17 @@ function Canvasimg() {
   }
 
   useEffect(()=>{
-
     handleSubmit();
   },[tamaFont])
-  //
-
-
-// Cambios de valor del input Range (Barra drag and drop )//
 
 
   const handleInput = (e) =>{
     setValor(e.target.value);
   }
 
-  let colorcanvas = "white";
-
-  const changecolors = ()=>{
-
-    if(valor >= 5){
-      setColor("white");
-    }
-    if(valor >= 10){
-      setColor("#F44336");
-    }
-    if(valor >= 15){
-      setColor("#E91E63");
-    }
-    if(valor >= 20){
-      setColor("#9C27B0");
-    }
-    if(valor >= 25){
-      setColor("#673AB7");
-    }
-    if(valor >= 30){
-      setColor("#3F51B5");
-    }
-    if(valor >= 35){
-      setColor("#2196F3");
-    }
-    if(valor >= 40){
-      setColor("#00BCD4");
-    }
-    if(valor >= 45){
-      setColor("#009688");
-    }
-    if(valor >= 50){
-      setColor("#4CAF50");
-    }
-    if(valor >= 55){
-      setColor("#8BC34A");
-    }
-    if(valor >= 60){
-      setColor("#CDDC39");
-    }
-    if(valor >= 65){
-      setColor("#FFEB3B");
-    }
-    if(valor >= 70){
-      setColor("#FFC107");
-    }
-    if(valor >= 75){
-      setColor("#FF9800");
-    }
-    if(valor >= 80){
-      setColor("#FF5722");
-    }
-    if(valor >= 85){
-      setColor("#EB144C");
-    }
-    if(valor >= 90){
-      setColor("#795548");
-    }
-    if(valor >= 95){
-      setColor("#607D8B");
-    }
-    if(valor >= 100){
-      setColor("#333333");
-    }
-  }
-
   useEffect(()=>{
-    changecolors();
     handleSubmit();
-
-  },[valor])
+  },[color])
 
 //
   const makeCanvas = () =>{
@@ -170,6 +102,7 @@ function Canvasimg() {
       ctx.textAlign = "center";
       ctx.strokeStyle = "black";
       ctx.lineWidth = tamaFont / 30;
+      console.log("este es" , color)
       ctx.fillStyle = color;
 
       if(canvastext){
@@ -193,7 +126,6 @@ function Canvasimg() {
       }
   }
 
-
   return (
       <div className="canvas">
         <form onKeyUp={handleSubmit}>
@@ -213,11 +145,9 @@ function Canvasimg() {
           <form>
           <input className="inputfontsize" type="range" value={tamaFont} min="0" max="150" onChange={handleFontSize}/>
           </form>
-          <h3> Color: {valor} </h3>
-          <Dots />
-          <form>
-          <input className="inputRango" type="range" value={valor} min="0" max="100" onChange={handleInput}/>
-          </form>
+          <h3> Color: {color} </h3>
+          <Dots handleValue={handleValue} />
+
         <img src={`./img/${valorimg}.jpg`} className="memeimg" id="memeimg"/>
 
         <canvas id="mycanvas" className="micanvas" width="240" height="297" />
