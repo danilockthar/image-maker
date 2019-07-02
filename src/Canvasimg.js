@@ -1,12 +1,13 @@
 import React, {useState, useEffect } from 'react';
 import './css/Canvasimg.css';
+import Dots from './Dots';
 
 
 
 function Canvasimg() {
 
   // declaro las variables a usar dentro de las funciones //
-  let canvastext, canvastext2, inputfile, filesimg, invisibleinput;
+  let canvastext, canvastext2, inputfile, filesimg, invisibleinput, passingcolor;
 
   // states //
   const [tamaFont, setTamaFont] = useState(70);
@@ -20,7 +21,9 @@ function Canvasimg() {
   const [disparador, setDisparador] = useState(0);
 
 
+
   useEffect(()=>{
+    console.log(passingcolor);
     handleSubmit();
   },[contorno])
 
@@ -80,26 +83,65 @@ function Canvasimg() {
 
   const changecolors = ()=>{
 
-    if(valor >= 10){
+    if(valor >= 5){
       setColor("white");
     }
+    if(valor >= 10){
+      setColor("#F44336");
+    }
+    if(valor >= 15){
+      setColor("#E91E63");
+    }
     if(valor >= 20){
-      setColor("red");
+      setColor("#9C27B0");
+    }
+    if(valor >= 25){
+      setColor("#673AB7");
     }
     if(valor >= 30){
-      setColor("black");
+      setColor("#3F51B5");
+    }
+    if(valor >= 35){
+      setColor("#2196F3");
     }
     if(valor >= 40){
-      setColor("gold");
+      setColor("#00BCD4");
+    }
+    if(valor >= 45){
+      setColor("#009688");
     }
     if(valor >= 50){
-      setColor("dodgerblue");
+      setColor("#4CAF50");
+    }
+    if(valor >= 55){
+      setColor("#8BC34A");
     }
     if(valor >= 60){
-      setColor("green");
+      setColor("#CDDC39");
+    }
+    if(valor >= 65){
+      setColor("#FFEB3B");
     }
     if(valor >= 70){
-      setColor("pink");
+      setColor("#FFC107");
+    }
+    if(valor >= 75){
+      setColor("#FF9800");
+    }
+    if(valor >= 80){
+      setColor("#FF5722");
+    }
+    if(valor >= 85){
+      setColor("#EB144C");
+    }
+    if(valor >= 90){
+      setColor("#795548");
+    }
+    if(valor >= 95){
+      setColor("#607D8B");
+    }
+    if(valor >= 100){
+      setColor("#333333");
     }
   }
 
@@ -132,19 +174,19 @@ function Canvasimg() {
 
       if(canvastext){
         // filltext toma 3 parametros, x , y, y tamaño maximo, en este caso especifico que no sobrepase el width.//
-        ctx.fillText(canvastext,canvas.width / 2, tamaFont, canvas.width);
+        ctx.fillText(canvastext,canvas.width / 2, tamaFont - 15, canvas.width - 50);
 
         if(contorno){
-          ctx.strokeText(canvastext,canvas.width / 2, tamaFont, canvas.width);
+          ctx.strokeText(canvastext,canvas.width / 2, tamaFont - 15, canvas.width - 50);
         }else{
           console.log("no stroke");
         }
       }
 
       if(canvastext2){
-        ctx.fillText(canvastext2,canvas.width / 2 , canvas.height - 14 , canvas.width);
+        ctx.fillText(canvastext2,canvas.width / 2 , canvas.height - 14 , canvas.width - 50);
         if(contorno){
-          ctx.strokeText(canvastext2,canvas.width / 2 , canvas.height - 14 , canvas.width);
+          ctx.strokeText(canvastext2,canvas.width / 2 , canvas.height - 14 , canvas.width - 50);
         }else{
           console.log("no stroke");
         }
@@ -172,6 +214,7 @@ function Canvasimg() {
           <input className="inputfontsize" type="range" value={tamaFont} min="0" max="150" onChange={handleFontSize}/>
           </form>
           <h3> Color: {valor} </h3>
+          <Dots />
           <form>
           <input className="inputRango" type="range" value={valor} min="0" max="100" onChange={handleInput}/>
           </form>

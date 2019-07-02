@@ -1,0 +1,181 @@
+.dots span:hover{
+
+  width: 35px;
+  height: 35px;
+}
+.dots span{
+  transition: 0.3s;
+}
+.packdots div{
+  display: inline-block;
+}
+
+.dot1{
+  height: 25px;
+  width: 25px;
+  background-color: white;
+  border-radius: 50%;
+  border: 1px solid #333;
+  display: inline-block;
+}
+.dot2{
+  height: 25px;
+  width: 25px;
+  background-color: #E91E63;
+  border-radius: 50%;
+  display: inline-block;
+}
+.dot3{
+  height: 25px;
+  width: 25px;
+  background-color: #9C27B0;
+  border-radius: 50%;
+  display: inline-block;
+}
+.dot4{
+  height: 25px;
+  width: 25px;
+  background-color: #673AB7;
+  border-radius: 50%;
+  display: inline-block;
+}
+.dot5{
+  height: 25px;
+  width: 25px;
+  background-color: #3F51B5;
+  border-radius: 50%;
+  display: inline-block;
+}
+.dot6{
+  height: 25px;
+  width: 25px;
+  background-color: #2196F3;
+  border-radius: 50%;
+  display: inline-block;
+}
+.dot7{
+  height: 25px;
+  width: 25px;
+  background-color: #03A9F4;
+  border-radius: 50%;
+  display: inline-block;
+}
+.dot8{
+  height: 25px;
+  width: 25px;
+  background-color: #00BCD4;
+  border-radius: 50%;
+  display: inline-block;
+}
+.dot9{
+  height: 25px;
+  width: 25px;
+  background-color: #009688;
+  border-radius: 50%;
+  display: inline-block;
+}
+.dot10{
+  height: 25px;
+  width: 25px;
+  background-color: #4CAF50;
+  border-radius: 50%;
+  display: inline-block;
+}
+.dot11{
+  height: 25px;
+  width: 25px;
+  background-color: #8BC34A;
+  border-radius: 50%;
+  display: inline-block;
+}
+.dot12{
+  height: 25px;
+  width: 25px;
+  background-color: #CDDC39;
+  border-radius: 50%;
+  display: inline-block;
+}
+.dot13{
+  height: 25px;
+  width: 25px;
+  background-color: #FFEB3B;
+  border-radius: 50%;
+  display: inline-block;
+}
+.dot14{
+  height: 25px;
+  width: 25px;
+  background-color: #FFC107;
+  border-radius: 50%;
+  display: inline-block;
+}
+.dot15{
+  height: 25px;
+  width: 25px;
+  background-color: #FF9800;
+  border-radius: 50%;
+  display: inline-block;
+}
+.dot16{
+  height: 25px;
+  width: 25px;
+  background-color: #FF5722;
+  border-radius: 50%;
+  display: inline-block;
+}
+.dot17{
+  height: 25px;
+  width: 25px;
+  background-color: #795548;
+  border-radius: 50%;
+  display: inline-block;
+}
+.dot18{
+  height: 25px;
+  width: 25px;
+  background-color: #000000;
+  border-radius: 50%;
+  display: inline-block;
+}
+.dot19{
+  height: 25px;
+  width: 25px;
+  background-color: #666666;
+  border-radius: 50%;
+  display: inline-block;
+}
+.dot20{
+  height: 25px;
+  width: 25px;
+  background-color: #B3B3B3;
+  border-radius: 50%;
+  display: inline-block;
+}
+.dot21{
+  height: 25px;
+  width: 25px;
+  background-color: #CCCCCC;
+  border-radius: 50%;
+  display: inline-block;
+}
+.dot22{
+  height: 25px;
+  width: 25px;
+  background-color: #808080;
+  border-radius: 50%;
+  display: inline-block;
+}
+.dot23{
+  height: 25px;
+  width: 25px;
+  background-color: #333333;
+  border-radius: 50%;
+  display: inline-block;
+}
+.dot24{
+  height: 25px;
+  width: 25px;
+  background-color: #999999;
+  border-radius: 50%;
+  display: inline-block;
+}

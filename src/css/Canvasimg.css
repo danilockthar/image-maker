@@ -1,6 +1,6 @@
 .micanvas{
 
-margin-left: 20px;
+  margin-left: 20px;
 }
 .imgcanvas{
   visibility: hidden;
@@ -9,7 +9,12 @@ margin-left: 20px;
   display: none;
 }
 .inputRango{
+
   display: block;
 }
+
+
+
+
 @import url(https://fonts.googleapis.com/css?family=Open+Sans&display=swap);
 @import url(https://fonts.googleapis.com/css?family=Barriecito&display=swap);
