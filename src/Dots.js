@@ -23,7 +23,7 @@ function Dots(props) {
 
     <section className="packdots">
 
-          <span id="dot1" data-info={props.datainfo}  data-value="white" data-click={props.clicked} onClick={props.handleValue}></span>
+          <span id="dot1" data-value="white" data-click={props.clicked} onClick={props.handleValue}></span>
           <span id="dot2"  data-value="#F44336" onClick={props.handleValue}></span>
           <span id="dot3"  data-value="#9C27B0" onClick={props.handleValue}></span>
           <span id="dot4" data-value="#673AB7" onClick={props.handleValue}></span>

@@ -21,14 +21,14 @@ function Canvasimg() {
   const [inputBottom, setInputBottom] = useState("");
 
 
-// Funcion que maneja el valor HEX del texto, heredada del componente Dots //
+  // Funcion que maneja el valor HEX del texto, heredada del componente Dots //
   const handleValue = (e) => {
-    // paso el valueHEX  a la funcion make canvas //
-    passingcolor = e.target.getAttribute('data-value');
-    setColor(passingcolor);
- // -- //
+      // paso el valueHEX  a la funcion make canvas //
+      passingcolor = e.target.getAttribute('data-value');
+      setColor(passingcolor);
+        // -- //
 
- // aca defino el Dots que esta en foco //
+        // aca defino el Dots que esta en foco //
 
       let all = document.getElementsByTagName('span');
       let x = e.target;
@@ -42,13 +42,13 @@ function Canvasimg() {
           }else{
             iduno.style.borderRadius = "50%";
           }
-          x.style.transform = 'translateX(-4px)';
-          x.style.transform = 'translateY(-5px)';
+          x.style.transform = 'translate(-4px, -12px)';
+          x.style.pointerEvents = 'none';
           x.style.background = "white";
           x.style.border = `5px solid ${passingcolor}`;
         }else{
-          one.style.transform = 'translateX(0px)';
-          one.style.transform = 'translateY(0px)';
+          one.style.pointerEvents = 'initial';
+          one.style.transform = 'translate(0px, 0px)';
           iduno.style.border = "2px solid #333";
           one.style.background = one.getAttribute('data-value');
           one.style.border = "none";
@@ -57,6 +57,7 @@ function Canvasimg() {
 // -- //
   }
 // -- //
+
   useEffect(()=>{
 
     handleSubmit();
