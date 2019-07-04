@@ -1,7 +1,17 @@
-
-
+@keyframes volver {
+  from{ transform: scale(1.5);}
+  to{transform: scale(1);}
+}
+@keyframes expandir {
+  from{ transform: scale(1);}
+  to{transform: scale(1.5);}
+}
 .dots span{
   transition: 0.3s;
+}
+.dots span:hover{
+  width: 50px;
+  height: 50px;
 }
 .dots{
   width: 500px;
@@ -48,8 +58,18 @@
   border-radius: 50%;
   cursor: pointer;
   display: inline-block;
+  animation-name: volver;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+  animation-iteration-count: 1;
 }
-
+#dot1:hover{
+  animation-name: expandir;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
 #dot2{
   transition: 0.3s;
   margin-left: 120px;
@@ -59,6 +79,17 @@
   border-radius: 50%;
   display: inline-block;
   cursor: pointer;
+  animation-name: volver;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+  animation-iteration-count: 1;
+}
+#dot2:hover{
+  animation-name: expandir;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
 }
 #dot3{
   transition: 0.3s;
@@ -69,6 +100,17 @@
   border-radius: 50%;
   display: inline-block;
   cursor: pointer;
+  animation-name: volver;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+  animation-iteration-count: 1;
+}
+#dot3:hover{
+  animation-name: expandir;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
 }
 #dot4{
   transition: 0.3s;
@@ -79,6 +121,17 @@
   border-radius: 50%;
   display: inline-block;
   cursor: pointer;
+  animation-name: volver;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+  animation-iteration-count: 1;
+}
+#dot4:hover{
+  animation-name: expandir;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
 }
 #dot5{
   transition: 0.3s;
@@ -89,6 +142,17 @@
   border-radius: 50%;
   display: inline-block;
   cursor: pointer;
+  animation-name: volver;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+  animation-iteration-count: 1;
+}
+#dot5:hover{
+  animation-name: expandir;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
 }
 #dot6{
   transition: 0.3s;
@@ -99,6 +163,17 @@
   border-radius: 50%;
   display: inline-block;
   cursor: pointer;
+  animation-name: volver;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+  animation-iteration-count: 1;
+}
+#dot6:hover{
+  animation-name: expandir;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
 }
 #dot7{
   transition: 0.3s;
@@ -109,6 +184,17 @@
   border-radius: 50%;
   display: inline-block;
   cursor: pointer;
+  animation-name: volver;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+  animation-iteration-count: 1;
+}
+#dot7:hover{
+  animation-name: expandir;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
 }
 #dot8{
   transition: 0.3s;
@@ -119,6 +205,17 @@
   border-radius: 50%;
   display: inline-block;
   cursor: pointer;
+  animation-name: volver;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+  animation-iteration-count: 1;
+}
+#dot8:hover{
+  animation-name: expandir;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
 }
 #dot9{
   transition: 0.3s;
@@ -129,6 +226,17 @@
   border-radius: 50%;
   display: inline-block;
   cursor: pointer;
+  animation-name: volver;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+  animation-iteration-count: 1;
+}
+#dot9:hover{
+  animation-name: expandir;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
 }
 #dot10{
   transition: 0.3s;
@@ -139,6 +247,17 @@
   border-radius: 50%;
   cursor: pointer;
   display: inline-block;
+  animation-name: volver;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+  animation-iteration-count: 1;
+}
+#dot10:hover{
+  animation-name: expandir;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
 }
 #dot11{
   transition: 0.3s;
@@ -149,6 +268,17 @@
   border-radius: 50%;
   display: inline-block;
   cursor: pointer;
+  animation-name: volver;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+  animation-iteration-count: 1;
+}
+#dot11:hover{
+  animation-name: expandir;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
 }
 #dot12{
   transition: 0.3s;
@@ -159,6 +289,17 @@
   border-radius: 50%;
   display: inline-block;
   cursor: pointer;
+  animation-name: volver;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+  animation-iteration-count: 1;
+}
+#dot12:hover{
+  animation-name: expandir;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
 }
 #dot13{
   transition: 0.3s;
@@ -169,6 +310,17 @@
   border-radius: 50%;
   display: inline-block;
   cursor: pointer;
+  animation-name: volver;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+  animation-iteration-count: 1;
+}
+#dot13:hover{
+  animation-name: expandir;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
 }
 #dot14{
   transition: 0.3s;
@@ -179,6 +331,17 @@
   border-radius: 50%;
   display: inline-block;
   cursor: pointer;
+  animation-name: volver;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+  animation-iteration-count: 1;
+}
+#dot14:hover{
+  animation-name: expandir;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
 }
 #dot15{
   transition: 0.3s;
@@ -189,6 +352,17 @@
   border-radius: 50%;
   display: inline-block;
   cursor: pointer;
+  animation-name: volver;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+  animation-iteration-count: 1;
+}
+#dot15:hover{
+  animation-name: expandir;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
 }
 #dot16{
   transition: 0.3s;
@@ -199,6 +373,17 @@
   border-radius: 50%;
   display: inline-block;
   cursor: pointer;
+  animation-name: volver;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+  animation-iteration-count: 1;
+}
+#dot16:hover{
+  animation-name: expandir;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
 }
 #dot17{
   transition: 0.3s;
@@ -209,6 +394,17 @@
   border-radius: 50%;
   display: inline-block;
   cursor: pointer;
+  animation-name: volver;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+  animation-iteration-count: 1;
+}
+#dot17:hover{
+  animation-name: expandir;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
 }
 #dot18{
   transition: 0.3s;
@@ -219,6 +415,17 @@
   border-radius: 50%;
   display: inline-block;
   cursor: pointer;
+  animation-name: volver;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+  animation-iteration-count: 1;
+}
+#dot18:hover{
+  animation-name: expandir;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
 }
 #dot19{
   transition: 0.3s;
@@ -229,6 +436,17 @@
   border-radius: 50%;
   display: inline-block;
   cursor: pointer;
+  animation-name: volver;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+  animation-iteration-count: 1;
+}
+#dot19:hover{
+  animation-name: expandir;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
 }
 #dot20{
   transition: 0.3s;
@@ -239,6 +457,17 @@
   border-radius: 50%;
   display: inline-block;
   cursor: pointer;
+  animation-name: volver;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+  animation-iteration-count: 1;
+}
+#dot20:hover{
+  animation-name: expandir;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
 }
 #dot21{
   transition: 0.3s;
@@ -249,6 +478,17 @@
   border-radius: 50%;
   display: inline-block;
   cursor: pointer;
+  animation-name: volver;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+  animation-iteration-count: 1;
+}
+#dot21:hover{
+  animation-name: expandir;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
 }
 #dot22{
   transition: 0.3s;
@@ -259,6 +499,17 @@
   border-radius: 50%;
   display: inline-block;
   cursor: pointer;
+  animation-name: volver;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+  animation-iteration-count: 1;
+}
+#dot22:hover{
+  animation-name: expandir;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
 }
 #dot23{
   cursor: pointer;
@@ -269,6 +520,17 @@
   background-color: #333333;
   border-radius: 50%;
   display: inline-block;
+  animation-name: volver;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+  animation-iteration-count: 1;
+}
+#dot23:hover{
+  animation-name: expandir;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
 }
 #dot24{
   cursor: pointer;
@@ -279,4 +541,15 @@
   background-color: #999999;
   border-radius: 50%;
   display: inline-block;
+  animation-name: volver;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+  animation-iteration-count: 1;
+}
+#dot24:hover{
+  animation-name: expandir;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
 }

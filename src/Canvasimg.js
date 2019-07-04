@@ -19,15 +19,17 @@ function Canvasimg() {
   const [valorimg, setValorimg] = useState("");
   const [inputTop, setInputTop] = useState("");
   const [inputBottom, setInputBottom] = useState("");
-  const [disparador, setDisparador] = useState(0);
 
 
+// Funcion que maneja el valor HEX del texto, heredada del componente Dots //
   const handleValue = (e) => {
-
-
+    // paso el valueHEX  a la funcion make canvas //
     passingcolor = e.target.getAttribute('data-value');
     setColor(passingcolor);
-      let miarray = [];
+ // -- //
+
+ // aca defino el Dots que esta en foco //
+
       let all = document.getElementsByTagName('span');
       let x = e.target;
 
@@ -40,19 +42,21 @@ function Canvasimg() {
           }else{
             iduno.style.borderRadius = "50%";
           }
-          
+          x.style.transform = 'translateX(-4px)';
+          x.style.transform = 'translateY(-5px)';
           x.style.background = "white";
           x.style.border = `5px solid ${passingcolor}`;
         }else{
+          one.style.transform = 'translateX(0px)';
+          one.style.transform = 'translateY(0px)';
           iduno.style.border = "2px solid #333";
           one.style.background = one.getAttribute('data-value');
           one.style.border = "none";
         }
       }
-
-
+// -- //
   }
-
+// -- //
   useEffect(()=>{
 
     handleSubmit();
@@ -143,9 +147,9 @@ function Canvasimg() {
       }
 
       if(canvastext2){
-        ctx.fillText(canvastext2,canvas.width / 2 , canvas.height - 14 , canvas.width - 50);
+        ctx.fillText(canvastext2,canvas.width / 2 , canvas.height - 20 , canvas.width - 50);
         if(contorno){
-          ctx.strokeText(canvastext2,canvas.width / 2 , canvas.height - 14 , canvas.width - 50);
+          ctx.strokeText(canvastext2,canvas.width / 2 , canvas.height - 20 , canvas.width - 50);
         }else{
           console.log("no stroke");
         }
@@ -169,7 +173,7 @@ function Canvasimg() {
         </form>
           <h3>Tamaño: {tamaFont} </h3>
           <form>
-          <input className="inputfontsize" type="range" value={tamaFont} min="0" max="150" onChange={handleFontSize}/>
+          <input className="inputfontsize" type="range" value={tamaFont} min="60" max="150" onChange={handleFontSize}/>
           </form>
           <h3> Color: {color} </h3>
           <Dots data-info={clicked} handleValue={handleValue} data-click={clicked} />
