@@ -1,180 +1,227 @@
-.dots span:hover{
 
-  width: 35px;
-  height: 35px;
+.punto{
+  display: none;
+}
+.dots span:hover{
+  width: 55px;
+  height: 55px;
 }
 .dots span{
+
   transition: 0.3s;
+  position: absolute;
 }
-.packdots div{
-  display: inline-block;
+.dots{
+  
+  margin-left: 600px;
 }
 
-.dot1{
-  height: 25px;
-  width: 25px;
+.packdots1 {
+  position: absolute;
+  margin-top: 60px;
+}
+.packdots2 {
+  position: absolute;
+  margin-top: 120px;
+}
+.packdots3 {
+  position: absolute;
+  margin-top: 180px;
+}
+#dot1{
+  margin-left: 60px;
+  height: 40px;
+  width: 40px;
+  border: 2px solid #333;
   background-color: white;
   border-radius: 50%;
-  border: 1px solid #333;
+
   display: inline-block;
 }
-.dot2{
-  height: 25px;
-  width: 25px;
+#dot1:hover{
+  height: 50px;
+  width: 50px;
+}
+#dot2{
+  margin-left: 120px;
+  height: 40px;
+  width: 40px;
   background-color: #E91E63;
   border-radius: 50%;
   display: inline-block;
 }
-.dot3{
-  height: 25px;
-  width: 25px;
+#dot3{
+  margin-left: 180px;
+  height: 40px;
+  width: 40px;
   background-color: #9C27B0;
   border-radius: 50%;
   display: inline-block;
 }
-.dot4{
-  height: 25px;
-  width: 25px;
+#dot4{
+  margin-left: 240px;
+  height: 40px;
+  width: 40px;
   background-color: #673AB7;
   border-radius: 50%;
   display: inline-block;
 }
-.dot5{
-  height: 25px;
-  width: 25px;
+#dot5{
+  margin-left: 300px;
+  height: 40px;
+  width: 40px;
   background-color: #3F51B5;
   border-radius: 50%;
   display: inline-block;
 }
-.dot6{
-  height: 25px;
-  width: 25px;
+#dot6{
+  margin-left:360px;
+  height: 40px;
+  width: 40px;
   background-color: #2196F3;
   border-radius: 50%;
   display: inline-block;
 }
-.dot7{
-  height: 25px;
-  width: 25px;
+#dot7{
+  margin-left: 60px;
+  height: 40px;
+  width: 40px;
   background-color: #03A9F4;
   border-radius: 50%;
   display: inline-block;
 }
-.dot8{
-  height: 25px;
-  width: 25px;
+#dot8{
+  margin-left: 120px;
+  height: 40px;
+  width: 40px;
   background-color: #00BCD4;
   border-radius: 50%;
   display: inline-block;
 }
-.dot9{
-  height: 25px;
-  width: 25px;
+#dot9{
+  margin-left: 180px;
+  height: 40px;
+  width: 40px;
   background-color: #009688;
   border-radius: 50%;
   display: inline-block;
 }
-.dot10{
-  height: 25px;
-  width: 25px;
+#dot10{
+  margin-left: 240px;
+  height: 40px;
+  width: 40px;
   background-color: #4CAF50;
   border-radius: 50%;
   display: inline-block;
 }
-.dot11{
-  height: 25px;
-  width: 25px;
+#dot11{
+  margin-left: 300px;
+  height: 40px;
+  width: 40px;
   background-color: #8BC34A;
   border-radius: 50%;
   display: inline-block;
 }
-.dot12{
-  height: 25px;
-  width: 25px;
+#dot12{
+  margin-left: 360px;
+  height: 40px;
+  width: 40px;
   background-color: #CDDC39;
   border-radius: 50%;
   display: inline-block;
 }
-.dot13{
-  height: 25px;
-  width: 25px;
+#dot13{
+  margin-left: 60px;
+  height: 40px;
+  width: 40px;
   background-color: #FFEB3B;
   border-radius: 50%;
   display: inline-block;
 }
-.dot14{
-  height: 25px;
-  width: 25px;
+#dot14{
+  margin-left: 120px;
+  height: 40px;
+  width: 40px;
   background-color: #FFC107;
   border-radius: 50%;
   display: inline-block;
 }
-.dot15{
-  height: 25px;
-  width: 25px;
+#dot15{
+  margin-left: 180px;
+  height: 40px;
+  width: 40px;
   background-color: #FF9800;
   border-radius: 50%;
   display: inline-block;
 }
-.dot16{
-  height: 25px;
-  width: 25px;
+#dot16{
+  margin-left: 240px;
+  height: 40px;
+  width: 40px;
   background-color: #FF5722;
   border-radius: 50%;
   display: inline-block;
 }
-.dot17{
-  height: 25px;
-  width: 25px;
+#dot17{
+  margin-left: 300px;
+  height: 40px;
+  width: 40px;
   background-color: #795548;
   border-radius: 50%;
   display: inline-block;
 }
-.dot18{
-  height: 25px;
-  width: 25px;
+#dot18{
+  margin-left: 360px;
+  height: 40px;
+  width: 40px;
   background-color: #000000;
   border-radius: 50%;
   display: inline-block;
 }
-.dot19{
-  height: 25px;
-  width: 25px;
+#dot19{
+  margin-left: 60px;
+  height: 40px;
+  width: 40px;
   background-color: #666666;
   border-radius: 50%;
   display: inline-block;
 }
-.dot20{
-  height: 25px;
-  width: 25px;
+#dot20{
+  margin-left: 120px;
+  height: 40px;
+  width: 40px;
   background-color: #B3B3B3;
   border-radius: 50%;
   display: inline-block;
 }
-.dot21{
-  height: 25px;
-  width: 25px;
+#dot21{
+  margin-left: 180px;
+  height: 40px;
+  width: 40px;
   background-color: #CCCCCC;
   border-radius: 50%;
   display: inline-block;
 }
-.dot22{
-  height: 25px;
-  width: 25px;
+#dot22{
+  margin-left: 240px;
+  height: 40px;
+  width: 40px;
   background-color: #808080;
   border-radius: 50%;
   display: inline-block;
 }
-.dot23{
-  height: 25px;
-  width: 25px;
+#dot23{
+  margin-left: 300px;
+  height: 40px;
+  width: 40px;
   background-color: #333333;
   border-radius: 50%;
   display: inline-block;
 }
-.dot24{
-  height: 25px;
-  width: 25px;
+#dot24{
+  margin-left: 360px;
+  height: 40px;
+  width: 40px;
   background-color: #999999;
   border-radius: 50%;
   display: inline-block;

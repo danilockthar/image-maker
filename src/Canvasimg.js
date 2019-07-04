@@ -10,6 +10,7 @@ function Canvasimg() {
   let canvastext, canvastext2, inputfile, filesimg, invisibleinput, passingcolor;
 
   // states //
+  const [clicked, setClicked] = useState(false);
   const [tamaFont, setTamaFont] = useState(70);
   const [color, setColor] = useState("white");
   const [valor, setValor] = useState(10);
@@ -22,9 +23,34 @@ function Canvasimg() {
 
 
   const handleValue = (e) => {
+
+
     passingcolor = e.target.getAttribute('data-value');
     setColor(passingcolor);
-    console.log("handle",color);
+      let miarray = [];
+      let all = document.getElementsByTagName('span');
+      let x = e.target;
+
+      let iduno = document.getElementById('dot1');
+
+      for (let one of all){
+        if(one == x) {
+          if(iduno == x){
+            iduno.style.borderRadius = "0px";
+          }else{
+            iduno.style.borderRadius = "50%";
+          }
+          x.setAttribute('data-unique', true);
+          x.style.background = "white";
+          x.style.border = `5px solid ${passingcolor}`;
+        }else{
+          iduno.style.border = "2px solid #333";
+          one.style.background = one.getAttribute('data-value');
+          one.style.border = "none";
+        }
+      }
+
+
   }
 
   useEffect(()=>{
@@ -102,7 +128,7 @@ function Canvasimg() {
       ctx.textAlign = "center";
       ctx.strokeStyle = "black";
       ctx.lineWidth = tamaFont / 30;
-      console.log("este es" , color)
+
       ctx.fillStyle = color;
 
       if(canvastext){
@@ -146,7 +172,7 @@ function Canvasimg() {
           <input className="inputfontsize" type="range" value={tamaFont} min="0" max="150" onChange={handleFontSize}/>
           </form>
           <h3> Color: {color} </h3>
-          <Dots handleValue={handleValue} />
+          <Dots data-info={clicked} handleValue={handleValue} data-click={clicked} />
 
         <img src={`./img/${valorimg}.jpg`} className="memeimg" id="memeimg"/>
 
