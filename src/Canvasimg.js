@@ -7,9 +7,10 @@ import Dots from './Dots';
 function Canvasimg() {
 
   // declaro las variables a usar dentro de las funciones //
-  let canvastext, canvastext2, inputfile, filesimg, invisibleinput, passingcolor;
+  let canvastext, canvastext2, inputfile, filesimg, invisibleinput, passingcolor, imgfinal;
 
   // states //
+  const [imgData, setImgData] = useState("");
   const [clicked, setClicked] = useState(false);
   const [tamaFont, setTamaFont] = useState(70);
   const [color, setColor] = useState("white");
@@ -20,7 +21,16 @@ function Canvasimg() {
   const [inputTop, setInputTop] = useState("");
   const [inputBottom, setInputBottom] = useState("");
 
+  const showData = () =>{
 
+    const link = document.createElement('a');
+
+    const rawImage = imgData.replace("image/jpeg", "image/octet-stream");
+    link.href = imgData;
+    link.download = 'imagen.jpg';
+    link.click();
+    console.log(link);
+  }
   // Funcion que maneja el valor HEX del texto, heredada del componente Dots //
   const handleValue = (e) => {
       // paso el valueHEX  a la funcion make canvas //
@@ -155,6 +165,10 @@ function Canvasimg() {
           console.log("no stroke");
         }
       }
+
+      let imgfinal = canvas.toDataURL('image/jpeg', 1.0);
+      setImgData(imgfinal);
+
   }
 
   return (
@@ -178,7 +192,7 @@ function Canvasimg() {
           </form>
           <h3> Color: {color} </h3>
           <Dots data-info={clicked} handleValue={handleValue} data-click={clicked} />
-
+          <button onClick={showData}> Show </button>
         <img src={`./img/${valorimg}.jpg`} className="memeimg" id="memeimg"/>
 
         <canvas id="mycanvas" className="micanvas" width="240" height="297" />
