@@ -1,216 +1,268 @@
 
-.punto{
-  display: none;
-}
-.dots span:hover{
-  width: 55px;
-  height: 55px;
-}
-.dots span{
 
+.dots span{
   transition: 0.3s;
-  position: absolute;
 }
 .dots{
-  
-  margin-left: 600px;
+  width: 500px;
+  height: 300px;
 }
-
-.packdots1 {
+.packdots{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.packdots span{
   position: absolute;
+}
+.packdots1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   margin-top: 60px;
 }
-.packdots2 {
+.packdots1 span{
   position: absolute;
-  margin-top: 120px;
+}
+.packdots2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  margin-top: 60px;
+}
+.packdots2 span{
+  position: absolute;
 }
 .packdots3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  margin-top: 60px;
+}
+.packdots3 span{
   position: absolute;
-  margin-top: 180px;
 }
 #dot1{
   margin-left: 60px;
+  transition: 0.3s;
   height: 40px;
   width: 40px;
   border: 2px solid #333;
   background-color: white;
   border-radius: 50%;
-
+  cursor: pointer;
   display: inline-block;
 }
-#dot1:hover{
-  height: 50px;
-  width: 50px;
-}
+
 #dot2{
+  transition: 0.3s;
   margin-left: 120px;
   height: 40px;
   width: 40px;
   background-color: #E91E63;
   border-radius: 50%;
   display: inline-block;
+  cursor: pointer;
 }
 #dot3{
+  transition: 0.3s;
   margin-left: 180px;
   height: 40px;
   width: 40px;
   background-color: #9C27B0;
   border-radius: 50%;
   display: inline-block;
+  cursor: pointer;
 }
 #dot4{
+  transition: 0.3s;
   margin-left: 240px;
   height: 40px;
   width: 40px;
   background-color: #673AB7;
   border-radius: 50%;
   display: inline-block;
+  cursor: pointer;
 }
 #dot5{
+  transition: 0.3s;
   margin-left: 300px;
   height: 40px;
   width: 40px;
   background-color: #3F51B5;
   border-radius: 50%;
   display: inline-block;
+  cursor: pointer;
 }
 #dot6{
-  margin-left:360px;
+  transition: 0.3s;
+  margin-left: 360px;
   height: 40px;
   width: 40px;
   background-color: #2196F3;
   border-radius: 50%;
   display: inline-block;
+  cursor: pointer;
 }
 #dot7{
+  transition: 0.3s;
   margin-left: 60px;
   height: 40px;
   width: 40px;
   background-color: #03A9F4;
   border-radius: 50%;
   display: inline-block;
+  cursor: pointer;
 }
 #dot8{
+  transition: 0.3s;
   margin-left: 120px;
   height: 40px;
   width: 40px;
   background-color: #00BCD4;
   border-radius: 50%;
   display: inline-block;
+  cursor: pointer;
 }
 #dot9{
+  transition: 0.3s;
   margin-left: 180px;
   height: 40px;
   width: 40px;
   background-color: #009688;
   border-radius: 50%;
   display: inline-block;
+  cursor: pointer;
 }
 #dot10{
+  transition: 0.3s;
   margin-left: 240px;
   height: 40px;
   width: 40px;
   background-color: #4CAF50;
   border-radius: 50%;
+  cursor: pointer;
   display: inline-block;
 }
 #dot11{
+  transition: 0.3s;
   margin-left: 300px;
   height: 40px;
   width: 40px;
   background-color: #8BC34A;
   border-radius: 50%;
   display: inline-block;
+  cursor: pointer;
 }
 #dot12{
+  transition: 0.3s;
   margin-left: 360px;
   height: 40px;
   width: 40px;
   background-color: #CDDC39;
   border-radius: 50%;
   display: inline-block;
+  cursor: pointer;
 }
 #dot13{
+  transition: 0.3s;
   margin-left: 60px;
   height: 40px;
   width: 40px;
   background-color: #FFEB3B;
   border-radius: 50%;
   display: inline-block;
+  cursor: pointer;
 }
 #dot14{
+  transition: 0.3s;
   margin-left: 120px;
   height: 40px;
   width: 40px;
   background-color: #FFC107;
   border-radius: 50%;
   display: inline-block;
+  cursor: pointer;
 }
 #dot15{
+  transition: 0.3s;
   margin-left: 180px;
   height: 40px;
   width: 40px;
   background-color: #FF9800;
   border-radius: 50%;
   display: inline-block;
+  cursor: pointer;
 }
 #dot16{
+  transition: 0.3s;
   margin-left: 240px;
   height: 40px;
   width: 40px;
   background-color: #FF5722;
   border-radius: 50%;
   display: inline-block;
+  cursor: pointer;
 }
 #dot17{
+  transition: 0.3s;
   margin-left: 300px;
   height: 40px;
   width: 40px;
   background-color: #795548;
   border-radius: 50%;
   display: inline-block;
+  cursor: pointer;
 }
 #dot18{
+  transition: 0.3s;
   margin-left: 360px;
   height: 40px;
   width: 40px;
   background-color: #000000;
   border-radius: 50%;
   display: inline-block;
+  cursor: pointer;
 }
 #dot19{
+  transition: 0.3s;
   margin-left: 60px;
   height: 40px;
   width: 40px;
   background-color: #666666;
   border-radius: 50%;
   display: inline-block;
+  cursor: pointer;
 }
 #dot20{
+  transition: 0.3s;
   margin-left: 120px;
   height: 40px;
   width: 40px;
   background-color: #B3B3B3;
   border-radius: 50%;
   display: inline-block;
+  cursor: pointer;
 }
 #dot21{
+  transition: 0.3s;
   margin-left: 180px;
   height: 40px;
   width: 40px;
   background-color: #CCCCCC;
   border-radius: 50%;
   display: inline-block;
+  cursor: pointer;
 }
 #dot22{
+  transition: 0.3s;
   margin-left: 240px;
   height: 40px;
   width: 40px;
   background-color: #808080;
   border-radius: 50%;
   display: inline-block;
+  cursor: pointer;
 }
 #dot23{
+  cursor: pointer;
+  transition: 0.3s;
   margin-left: 300px;
   height: 40px;
   width: 40px;
@@ -219,6 +271,8 @@
   display: inline-block;
 }
 #dot24{
+  cursor: pointer;
+  transition: 0.3s;
   margin-left: 360px;
   height: 40px;
   width: 40px;

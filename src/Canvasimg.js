@@ -40,7 +40,7 @@ function Canvasimg() {
           }else{
             iduno.style.borderRadius = "50%";
           }
-          x.setAttribute('data-unique', true);
+          
           x.style.background = "white";
           x.style.border = `5px solid ${passingcolor}`;
         }else{

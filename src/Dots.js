@@ -4,6 +4,10 @@ import './css/Dots.css';
 
 function Dots(props) {
 
+  const dotscss = {
+
+  }
+
   let passingcolor;
   const handleValue = (e) =>{
     passingcolor = e.target.getAttribute('data-value');
@@ -14,7 +18,7 @@ function Dots(props) {
   }
 
   return(
-    <div className="dots">
+    <div className="dots" style={dotscss}>
 
 
     <section className="packdots">
