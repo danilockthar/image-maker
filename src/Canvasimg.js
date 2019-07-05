@@ -176,7 +176,7 @@ function Canvasimg() {
 
   return (
       <div className="canvas">
-        <form onKeyUp={handleSubmit}>
+        <form className="forminput" onKeyUp={handleSubmit}>
         <input type="hidden" value="" id="invisibleinput" />
         <input type="text" placeholder="Texto Top" value={inputTop} onChange={handleInputTop}/>
         <input type="text" placeholder="Texto bottom" value={inputBottom} onChange={handleInputBottom} />

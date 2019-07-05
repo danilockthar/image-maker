@@ -125,7 +125,11 @@ function Clash(){
       console.log(link);
     }
   }
-
+  if(msgError){
+    setTimeout(()=>{
+      setMsgError("");
+    },3000);
+  }
 
   return(
     <div className="clash">

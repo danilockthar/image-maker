@@ -16,7 +16,11 @@
 .Dots{
   background: red;
 }
-
+.forminput input[type = text]{
+  width: 205px;
+  display: block;
+  color: tomato;
+}
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans&display=swap);
 @import url(https://fonts.googleapis.com/css?family=Barriecito&display=swap);
