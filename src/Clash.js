@@ -139,7 +139,7 @@ function Clash(){
         <label> Mi edad </label>
         <input type="text" placeholder="Mi edad" value={miEdad} onChange={showEdad} />
         <label> Fecha del cumple.</label>
-        <input type="text" placeholder="Fecha del cumple" value={fecha} onChange={showFecha} />
+        <input type="text" placeholder="xx/xx/xx" maxlength="8" value={fecha} onChange={showFecha} />
         <label> En que horario </label>
         <input type="text" placeholder="Horario" value={horario} onChange={showHorario} />
         <label> Direccion </label>
