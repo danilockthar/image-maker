@@ -22,14 +22,19 @@ function Canvasimg() {
   const [inputBottom, setInputBottom] = useState("");
 
   const showData = () =>{
+    if(imgData == "data:,"){
+      console.log("No se pudo ejecutar el comando");
+    }else{
+      const link = document.createElement('a');
 
-    const link = document.createElement('a');
+      const rawImage = imgData.replace("image/jpeg", "image/octet-stream");
+      link.href = imgData;
+      link.download = 'imagen.jpg';
+      link.click();
+      console.log(link);
+    }
 
-    const rawImage = imgData.replace("image/jpeg", "image/octet-stream");
-    link.href = imgData;
-    link.download = 'imagen.jpg';
-    link.click();
-    console.log(link);
+
   }
   // Funcion que maneja el valor HEX del texto, heredada del componente Dots //
   const handleValue = (e) => {
@@ -49,13 +54,14 @@ function Canvasimg() {
         if(one == x) {
           if(iduno == x){
             iduno.style.borderRadius = "0px";
+
           }else{
             iduno.style.borderRadius = "50%";
           }
-          x.style.transform = 'translate(-4px, -12px)';
+          x.style.transform = 'scale(1.3)';
           x.style.pointerEvents = 'none';
           x.style.background = "white";
-          x.style.border = `5px solid ${passingcolor}`;
+          x.style.border = `3px solid ${passingcolor}`;
         }else{
           one.style.pointerEvents = 'initial';
           one.style.transform = 'translate(0px, 0px)';
