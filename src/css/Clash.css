@@ -1,0 +1,22 @@
+.clash{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+#templateimg{
+  display: none;
+}
+form input{
+  display: block;
+}
+.pantallaok{
+  color: #5cb85c;
+  src: url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,600i,700,700i,800,800i&display=swap');
+  font-family: Open Sans, sans-serif;
+  font-size: 14px;
+}
+.pantallanotok{
+  color: #d9534f;
+  src: url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,600i,700,700i,800,800i&display=swap');
+  font-family: Open Sans, sans-serif;
+  font-size: 14px;
+}

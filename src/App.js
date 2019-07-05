@@ -1,12 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Navigation from './Navigation';
 import './App.css';
 import Canvasimg from './Canvasimg';
+import Clash from './Clash';
+
+
+
 function App() {
   return (
+    <Router>
+
     <div className="App">
-      <Canvasimg />
+    <Navigation />
+    <Switch>
+        <Route path='/' exact component={Canvasimg}/>
+        <Route path='/clash' component={Clash}/>
+    </Switch>
+
     </div>
+    </Router>
   );
 }
 

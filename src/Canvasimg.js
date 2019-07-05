@@ -7,7 +7,7 @@ import Dots from './Dots';
 function Canvasimg() {
 
   // declaro las variables a usar dentro de las funciones //
-  let canvastext, canvastext2, inputfile, filesimg, invisibleinput, passingcolor, imgfinal;
+  let canvastext, canvastext2, passingcolor;
 
   // states //
   const [imgData, setImgData] = useState("");
@@ -47,14 +47,13 @@ function Canvasimg() {
 
       let all = document.getElementsByTagName('span');
       let x = e.target;
-
       let iduno = document.getElementById('dot1');
 
       for (let one of all){
         if(one == x) {
           if(iduno == x){
-            iduno.style.borderRadius = "0px";
 
+            iduno.style.borderRadius = "0px";
           }else{
             iduno.style.borderRadius = "50%";
           }
@@ -96,8 +95,6 @@ function Canvasimg() {
   }
 
   const handleSubmit = (e) =>{
-
-
      canvastext = inputTop;
      canvastext2 = inputBottom;
      makeCanvas();
@@ -145,7 +142,7 @@ function Canvasimg() {
 
 
       console.log(tamaFont);
-      ctx.font = tamaFont + 'px Arial';
+      ctx.font = tamaFont + 'px Supercell-Magic';
       ctx.textAlign = "center";
       ctx.strokeStyle = "black";
       ctx.lineWidth = tamaFont / 30;
