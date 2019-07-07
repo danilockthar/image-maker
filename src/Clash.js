@@ -38,7 +38,10 @@ function Clash(){
     descripcion : '',
     subido : ''
   }
-  const [alwaysTrue, setAlwaysTrue] = useState(true);
+
+  const [count, setCount] = useState(0);
+  const [isLoading, setIsLoading] = useState(false);
+  const [loaded, setLoaded] = useState(false);
   const [miEdad, setMiEdad] = useState("");
   const [fecha, setFecha] = useState("");
   const [horario, setHorario] = useState("");
@@ -48,43 +51,40 @@ function Clash(){
   const [imgData, setImgData] = useState("");
   const [msgError, setMsgError] = useState("");
   const [mensajeh3, setMensajeh3] = useState(false);
-  const [imgFetched, setImgFetched] = useState("");
   const [nameTemplate, setNameTemplate] = useState("");
   const [canvasInfo, setCanvasInfo] = useState([midata]);
 
 
-  const traedata = () => {
-      fetch("http://www.broeders.com.ar/includes/templates.php", {
-        method: 'POST',
-        headers: new Headers({
-               'Content-Type': 'application/x-www-form-urlencoded',
-      }),
-      body: "imgTagName="+ nameTemplate
-  })
-    .then((response) => response.json())
-    .then((json) => {
-      const data = json;
-      setCanvasInfo(data);
-      console.log(canvasInfo[0].fechaFontColor);
-
-    }
-  )
-    .catch((error) => {
-      console.error(error);
-  })
-
-  };
-
-  const handleTemplate = (e)=>{
-    setNameTemplate(e.target.value);
-    makeCanvas();
+  const fetchData = (nameTemplate) =>{
+    setIsLoading(true);
+    fetch("http://www.broeders.com.ar/includes/templates.php", {
+      method: 'POST',
+      headers: new Headers({
+             'Content-Type': 'application/x-www-form-urlencoded',
+    }),
+    body: "imgTagName="+ nameTemplate
+    })
+      .then((response) => response.json())
+      .then((json) => {
+        const data = json;
+        setCanvasInfo(data);
+        console.log(canvasInfo[0].fechaFontColor);
+        setIsLoading(false);
+        setCount(count + 1);
+      }
+    )
+      .catch((error) => {
+        console.error(error);
+    })
   }
 
-    useEffect(traedata, [nameTemplate]);
+  const handleSelect = (e) =>{
+      setNameTemplate(e.target.value);
 
-    useEffect(()=>{
-      makeCanvas();
-    },[]);
+    }
+  useEffect(()=>{
+    makeCanvas();
+  },[count])
 
   const handleSubmit = () =>{
 
@@ -119,6 +119,8 @@ function Clash(){
 
   const makeCanvas = ()=>{
 
+
+
     let imagen = document.getElementById('templateimg');
     let canvas = document.getElementById('canvas');
     let ctx = canvas.getContext("2d");
@@ -133,6 +135,7 @@ function Clash(){
     ctx.strokeStyle = "black";
     ctx.lineWidth = 2;
 
+    console.log('makecanvas ejecutand');
     if(canvasEdad){
 
       ctx.font = canvasInfo[0].edadFont;
@@ -198,18 +201,17 @@ function Clash(){
 
   return(
     <div className="clash">
-      <section className="preview">
 
+      <section className="preview">
+        {isLoading ? <img src="img/puff.svg" className="loadercapa" /> : <canvas id="canvas" width="240" height="297" />}
         <img src={`img/${canvasInfo[0].imgUrl}`} id="templateimg" />
-        <canvas id="canvas" width="240" height="297" />
+
       </section>
 
       <section className="estilos">
 
-      <form>
-      <input type="text"  onKeyUp={handleTemplate} />
-      </form>
-
+      <button onClick={()=>{fetchData('boca-juniors')}}> Boca Jrs </button>
+      <button onClick={()=>{fetchData('clash-royale')}}> Clash Royale </button>
       <form onKeyUp={handleSubmit}>
 
         <label> Mi edad </label>

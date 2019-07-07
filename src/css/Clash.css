@@ -7,6 +7,7 @@
 }
 #templateimg{
   display: none;
+
 }
 form input{
   color : dodgerblue;
@@ -41,4 +42,18 @@ form input[type=text]{
   src: url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,600i,700,700i,800,800i&display=swap');
   font-family: Open Sans, sans-serif;
   font-size: 14px;
+}
+
+.preview{
+  text-align: center;
+  background: #333;
+  width: 750px;
+  height: 500px;
+}
+#canvas{
+  margin-top: 30px;
+}
+.loadercapa{
+  width: 100px;
+  margin-top: 200px;
 }
