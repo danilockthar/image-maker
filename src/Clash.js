@@ -7,7 +7,37 @@ import CanvasLoader from './CanvasLoader';
 function Clash(){
 
   let canvasEdad, canvasFecha, canvasHorario, canvasLugar,canvasinfoplus, canvasCumple;
-
+  let midata = {
+    id : 0,
+    imgUrl : '',
+    imgTagName : '',
+    edadFont : '',
+    edadFontColor : '',
+    edadX : 0,
+    edadY : 0,
+    fechaFont : '',
+    fechaFontColor : '',
+    fechaX : 0,
+    fechaY : 0,
+    horarioFont : '',
+    horarioFontColor : '',
+    horarioX : 0,
+    horarioY : 0,
+    lugarFont : '',
+    lugarFontColor : '',
+    lugarX : 0,
+    lugarY : 0,
+    infoplusFont: '',
+    infoplusFontColor : '',
+    infoplusX: 0,
+    infoplusY : 0,
+    cumpleFont: '',
+    cumpleFontColor : '',
+    cumpleX : 0,
+    cumpleY: 0,
+    descripcion : '',
+    subido : ''
+  }
   const [alwaysTrue, setAlwaysTrue] = useState(true);
   const [miEdad, setMiEdad] = useState("");
   const [fecha, setFecha] = useState("");
@@ -20,6 +50,7 @@ function Clash(){
   const [mensajeh3, setMensajeh3] = useState(false);
   const [imgFetched, setImgFetched] = useState("");
   const [nameTemplate, setNameTemplate] = useState("");
+  const [canvasInfo, setCanvasInfo] = useState([midata]);
 
 
   const traedata = () => {
@@ -28,22 +59,25 @@ function Clash(){
         headers: new Headers({
                'Content-Type': 'application/x-www-form-urlencoded',
       }),
-      body: "imgUrl="+ nameTemplate
+      body: "imgTagName="+ nameTemplate
   })
     .then((response) => response.json())
     .then((json) => {
       const data = json;
-      setImgFetched(data[0].imgUrl);
-      console.log(imgFetched);
+      setCanvasInfo(data);
+      console.log(canvasInfo[0].fechaFontColor);
+
     }
   )
     .catch((error) => {
       console.error(error);
   })
+
   };
 
   const handleTemplate = (e)=>{
     setNameTemplate(e.target.value);
+    makeCanvas();
   }
 
     useEffect(traedata, [nameTemplate]);
@@ -101,40 +135,40 @@ function Clash(){
 
     if(canvasEdad){
 
-      ctx.font = '40px Supercell-Magic';
-      ctx.fillStyle = "#f4ae05";
-      ctx.fillText(miEdad, 460, 145, canvas.width - 50);
-      ctx.strokeText(miEdad, 460, 145, canvas.width - 50);
+      ctx.font = canvasInfo[0].edadFont;
+      ctx.fillStyle = canvasInfo[0].edadFontColor;
+      ctx.fillText(miEdad, canvasInfo[0].edadX, canvasInfo[0].edadY, canvas.width - 50);
+      ctx.strokeText(miEdad, canvasInfo[0].edadX, canvasInfo[0].edadY, canvas.width - 50);
     }
     if(canvasFecha){
-      ctx.font = '30px Supercell-Magic';
-      ctx.fillStyle = "#dddce4";
-      ctx.fillText(fecha,180, 200, canvas.width - 50);
-      ctx.strokeText(fecha,180, 200, canvas.width - 50);
+      ctx.font = canvasInfo[0].fechaFont;
+      ctx.fillStyle = canvasInfo[0].fechaFontColor;
+      ctx.fillText(fecha,canvasInfo[0].fechaX, canvasInfo[0].fechaY, canvas.width - 50);
+      ctx.strokeText(fecha,canvasInfo[0].fechaX, canvasInfo[0].fechaY, canvas.width - 50);
     }
     if(canvasHorario){
-      ctx.font = '30px Supercell-Magic';
-      ctx.fillStyle = "#dddce4";
-      ctx.fillText(horario, 180, 290, canvas.width - 50);
-      ctx.strokeText(horario, 180, 290, canvas.width - 50);
+      ctx.font = canvasInfo[0].horarioFont;
+      ctx.fillStyle = canvasInfo[0].horarioFontColor;
+      ctx.fillText(horario, canvasInfo[0].horarioX, canvasInfo[0].horarioY, canvas.width - 50);
+      ctx.strokeText(horario, canvasInfo[0].horarioX, canvasInfo[0].horarioY, canvas.width - 50);
     }
     if(canvasLugar){
-      ctx.font = '25px Supercell-Magic';
-      ctx.fillStyle = "#dddce4";
-      ctx.fillText(lugar, 180, 360, canvas.width - 50);
-      ctx.strokeText(lugar, 180, 360, canvas.width - 50);
+      ctx.font = canvasInfo[0].lugarFont;
+      ctx.fillStyle = canvasInfo[0].lugarFontColor;
+      ctx.fillText(lugar, canvasInfo[0].lugarX, canvasInfo[0].lugarY, canvas.width - 50);
+      ctx.strokeText(lugar, canvasInfo[0].lugarX, canvasInfo[0].lugarY, canvas.width - 50);
     }
     if(canvasinfoplus){
-      ctx.font = '20px Supercell-Magic';
-      ctx.fillStyle = "#dddce4";
-      ctx.fillText(infoplus, 180, 390, canvas.width - 50);
-      ctx.strokeText(infoplus, 180, 390, canvas.width - 50);
+      ctx.font = canvasInfo[0].infoplusFont;
+      ctx.fillStyle = canvasInfo[0].infoplusFontColor;
+      ctx.fillText(infoplus, canvasInfo[0].infoplusX, canvasInfo[0].infoplusY, canvas.width - 50);
+      ctx.strokeText(infoplus, canvasInfo[0].infoplusX, canvasInfo[0].infoplusY, canvas.width - 50);
     }
     if(canvasCumple){
-      ctx.font = '35px Supercell-Magic';
-      ctx.fillStyle = "#f4ae05";
-      ctx.fillText(cumpleañero, 350, 440, canvas.width - 50);
-      ctx.strokeText(cumpleañero, 350, 440, canvas.width - 50);
+      ctx.font = canvasInfo[0].cumpleFont;
+      ctx.fillStyle = canvasInfo[0].cumpleFontColor;
+      ctx.fillText(cumpleañero, canvasInfo[0].cumpleX, canvasInfo[0].cumpleY, canvas.width - 50);
+      ctx.strokeText(cumpleañero, canvasInfo[0].cumpleX, canvasInfo[0].cumpleY, canvas.width - 50);
     }
     let imgfinal = canvas.toDataURL('image/jpeg', 1.0);
     setImgData(imgfinal);
@@ -166,13 +200,18 @@ function Clash(){
     <div className="clash">
       <section className="preview">
 
-        <img src={`img/${imgFetched}`} id="templateimg" />
+        <img src={`img/${canvasInfo[0].imgUrl}`} id="templateimg" />
         <canvas id="canvas" width="240" height="297" />
       </section>
 
       <section className="estilos">
+
+      <form>
+      <input type="text"  onKeyUp={handleTemplate} />
+      </form>
+
       <form onKeyUp={handleSubmit}>
-        <input type="text" value={nameTemplate} onChange={handleTemplate} />
+
         <label> Mi edad </label>
         <input type="text" placeholder="Mi edad" value={miEdad} onChange={showEdad} />
         <label> Fecha del cumple.</label>
