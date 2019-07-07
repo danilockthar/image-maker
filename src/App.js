@@ -4,6 +4,7 @@ import Navigation from './Navigation';
 import './App.css';
 import Canvasimg from './Canvasimg';
 import Clash from './Clash';
+import Boca from './Boca';
 
 
 
@@ -16,6 +17,7 @@ function App() {
     <Switch>
         <Route path='/' exact component={Canvasimg}/>
         <Route path='/clash' component={Clash}/>
+        <Route path='/boca' component={Boca}/>
     </Switch>
 
     </div>

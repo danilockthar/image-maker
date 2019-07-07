@@ -15,9 +15,12 @@ function Navigation() {
         <NavLink exact to='/' className="Linktags" activeClassName="selected">
           HOME
         </NavLink>
-        
+
         <NavLink to='/clash' className="Linktags" activeClassName="selected">
           Clash Royale
+        </NavLink>
+        <NavLink to='/boca' className="Linktags" activeClassName="selected">
+          Boca Juniors
         </NavLink>
         </div>
       </nav>
