@@ -1,6 +1,6 @@
 import React, {useState, useEffect } from 'react';
 import './css/Clash.css';
-
+import LowNav from './LowNav';
 
 
 
@@ -53,17 +53,19 @@ function Clash(){
   const [mensajeh3, setMensajeh3] = useState(false);
   const [nameTemplate, setNameTemplate] = useState("");
   const [canvasInfo, setCanvasInfo] = useState([midata]);
+  const [secondCount, setSecondCount] = useState(0);
 
 
-
-  const fetchData = (nameTemplate) =>{
+  const fetchData = (e) =>{
+    let dataname = e.target.getAttribute('data-value');
+    console.log(dataname);
     setIsLoading(true);
     fetch("http://www.broeders.com.ar/includes/templates.php", {
       method: 'POST',
       headers: new Headers({
              'Content-Type': 'application/x-www-form-urlencoded',
     }),
-    body: "imgTagName="+ nameTemplate
+    body: "imgTagName="+ dataname
     })
       .then((response) => response.json())
       .then((json) => {
@@ -71,18 +73,25 @@ function Clash(){
         setCanvasInfo(data);
         setIsLoading(false);
         setCount(count + 1);
+
       }
     )
       .catch((error) => {
         console.error(error);
     })
   }
+    const setNombre = (e)=>{
+      let name = e.target.getAttribute('data-value');
+      setNameTemplate(name);
+      console.log(name);
+      setSecondCount(secondCount + 1);
+    }
 
 
     useEffect(()=>{
       const timer = setTimeout(()=>{
         makeCanvas();
-      },100);
+      },300);
     },[count])
 
 
@@ -195,7 +204,8 @@ function Clash(){
 
   return(
     <div className="clash">
-        <img src='img/cumplepak.jpg' id="primerimg" />
+    <LowNav setNombre={fetchData} />
+    <section className='templateCard'>
       <section className="preview">
         {isLoading ? <img src="img/puff.svg" className="loadercapa" /> : <canvas id="canvas" width="700" height="450" />}
         <img src={`img/${canvasInfo[0].imgUrl}`} id="templateimg" />
@@ -204,29 +214,25 @@ function Clash(){
 
       <section className="estilos">
 
-      <button onClick={()=>{fetchData('boca-juniors')}}> Boca Jrs </button>
-      <button onClick={()=>{fetchData('clash-royale')}}> Clash Royale </button>
-      <form onKeyUp={handleSubmit}>
+      <form onKeyUp={handleSubmit} className="datosform">
 
-        <label> Mi edad </label>
-        <input type="text" placeholder="Mi edad" value={miEdad} onChange={showEdad} />
-        <label> Fecha del cumple.</label>
-        <input type="text" placeholder="Ej: 03/12/19" maxLength="8" value={fecha} onChange={showFecha} />
-        <label> En que horario </label>
-        <input type="text" placeholder="Ej: 18 a 21 hs" value={horario} onChange={showHorario} />
-        <label> Direccion </label>
-        <input type="text" placeholder="Lugar del cumple" value={lugar} onChange={showLugar} />
-        <input type="text" placeholder="+info" value={infoplus} onChange={showMasInfo} />
-        <label> Mi nombre es </label>
-        <input type="text" placeholder="Mi nombre es" value={cumpleañero} onChange={showCumple} />
+        <input type="text" className='inputEdad' placeholder="10" value={miEdad} maxLength="2" onChange={showEdad} />
+
+        <input type="text" className='inputFecha' placeholder="Ej: 03/12/19" maxLength="8" value={fecha} onChange={showFecha} />
+
+        <input type="text" className='inputHorario' placeholder="Ej: 18 a 21 hs" maxLength="10" value={horario} onChange={showHorario} />
+
+        <input type="text" className='inputLugar' placeholder="Lugar del cumple" value={lugar} onChange={showLugar} />
+        <input type="text" placeholder="+info" className='inputInfo' value={infoplus} onChange={showMasInfo} />
+        <input type="text" placeholder="Mi nombre es" className='inputCumple' value={cumpleañero} onChange={showCumple} />
       </form>
 
 
-      <button onClick={showData} className="btndescarga"> Listo! </button>
+      <button onClick={showData} className="btndescarga"> Listo ! </button>
 
       <h3 className={mensajeh3 ? 'pantallaok': 'pantallanotok'}>  {msgError}</h3>
       </section>
-
+    </section>
 
 
 

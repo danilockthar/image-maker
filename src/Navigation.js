@@ -1,10 +1,28 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { NavLink } from 'react-router-dom';
 import './css/Navigation.css';
 
-function Navigation() {
+
+function Navigation(props) {
+
+  const [toggle, setToggle] = useState(false);
+
+  const toggleHideDiv = ()=>{
+
+    let hidden = document.getElementById('hiddenDiv');
+    if(!toggle){
+      console.log('true');
+      setToggle(true);
+      hidden.style.height = '500px';
+    }else{
+      console.log('false');
+      setToggle(false);
+      hidden.style.height = '0px';
+    }
+  }
 
   return (
+    <div className='navigation'>
       <nav>
 
         <NavLink to='/' className="Linktags">
@@ -23,7 +41,10 @@ function Navigation() {
           Boca Juniors
         </NavLink>
         </div>
+
       </nav>
+
+      </div>
   );
 }
 

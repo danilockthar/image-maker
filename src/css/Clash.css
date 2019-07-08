@@ -1,35 +1,50 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
-
-.clash{
+.templateCard{
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-gap: 15px;
+}
+.clash{
+
 }
 #templateimg{
   display: none;
-
+}
+.datosform{
+  margin-top: 80px;
+  margin-left: 30px;
 }
 form input{
-  color : dodgerblue;
-  font-size: 16px;
-  font-weight: bold;
+  color : tomato;
   font-family: Open Sans, sans-serif;
-  display: block;
+
 }
 form input[type=text]{
   padding: 5px;
-  width: 300px;
-  height: 30px;
+
 }
+
 .btndescarga{
-  font-size: 14px;
+  margin-top: -123px;
+  position: absolute;
+  margin-left: 308px;
+  transform: rotate(90deg);
+  font-size: 25px;
+  writing-mode: vertical-lr;
   font-family: Open Sans, sans-serif;
   color: white;
+  height: 85px;
   font-weight: 600;
   border : none;
   padding:10px;
   width: 160px;
-  background: dodgerblue;
+  background: #d9534f;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.btndescarga:hover{
+  background: #5cb85c;
 }
 .pantallaok{
   color: #5cb85c;
@@ -45,13 +60,13 @@ form input[type=text]{
 }
 
 .preview{
+  margin-left:  14px;
   text-align: center;
-  background: #333;
-  width: 750px;
+
+  width: 720px;
   height: 500px;
 }
 #canvas{
-
   margin-top: 30px;
 }
 .loadercapa{
@@ -60,4 +75,48 @@ form input[type=text]{
 }
 #primerimg{
   display: none;
+}
+
+.inputEdad{
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+  height: 40px;
+  width: 40px;
+}
+.inputFecha{
+
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+  height: 40px;
+  width: 170px;
+}
+.inputHorario{
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+  height: 40px;
+  width: 150px;
+}
+.inputLugar{
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+  height: 40px;
+  width: 300px;
+}
+.inputInfo{
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+  height: 40px;
+  width: 300px;
+}
+.inputCumple{
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+  height: 40px;
+  width: 300px;
 }
