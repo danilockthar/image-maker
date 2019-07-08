@@ -1,15 +1,16 @@
 import React, {useState, useEffect } from 'react';
 import './css/Clash.css';
-import CanvasLoader from './CanvasLoader';
+
 
 
 
 function Clash(){
 
-  let canvasEdad, canvasFecha, canvasHorario, canvasLugar,canvasinfoplus, canvasCumple;
+
+
   let midata = {
     id : 0,
-    imgUrl : '',
+    imgUrl : 'cumplepak.jpg',
     imgTagName : '',
     edadFont : '',
     edadFontColor : '',
@@ -38,10 +39,9 @@ function Clash(){
     descripcion : '',
     subido : ''
   }
-
+  let data = [midata];
   const [count, setCount] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
-  const [loaded, setLoaded] = useState(false);
   const [miEdad, setMiEdad] = useState("");
   const [fecha, setFecha] = useState("");
   const [horario, setHorario] = useState("");
@@ -55,6 +55,7 @@ function Clash(){
   const [canvasInfo, setCanvasInfo] = useState([midata]);
 
 
+
   const fetchData = (nameTemplate) =>{
     setIsLoading(true);
     fetch("http://www.broeders.com.ar/includes/templates.php", {
@@ -66,9 +67,8 @@ function Clash(){
     })
       .then((response) => response.json())
       .then((json) => {
-        const data = json;
+        data = json;
         setCanvasInfo(data);
-        console.log(canvasInfo[0].fechaFontColor);
         setIsLoading(false);
         setCount(count + 1);
       }
@@ -78,22 +78,16 @@ function Clash(){
     })
   }
 
-  const handleSelect = (e) =>{
-      setNameTemplate(e.target.value);
 
-    }
-  useEffect(()=>{
-    makeCanvas();
-  },[count])
+    useEffect(()=>{
+      const timer = setTimeout(()=>{
+        makeCanvas();
+      },100);
+    },[count])
+
 
   const handleSubmit = () =>{
 
-     canvasEdad = miEdad;
-     canvasFecha = fecha;
-     canvasHorario = horario;
-     canvasLugar = lugar;
-     canvasinfoplus = infoplus;
-     canvasCumple = cumpleañero;
      makeCanvas();
   }
 
@@ -116,7 +110,6 @@ function Clash(){
     setInfoplus(e.target.value);
   }
 
-
   const makeCanvas = ()=>{
 
 
@@ -136,7 +129,7 @@ function Clash(){
     ctx.lineWidth = 2;
 
     console.log('makecanvas ejecutand');
-    console.log(miEdad);
+    console.log(count + 1);
     if(miEdad){
 
       ctx.font = canvasInfo[0].edadFont;
@@ -182,15 +175,15 @@ function Clash(){
       setMsgError("Rellene todos los campos!");
       setMensajeh3(false);
     }else{
-      setMsgError("Descarga exitosa!");
-      setMensajeh3(true);
+
       const link = document.createElement('a');
 
       const rawImage = imgData.replace("image/jpeg", "image/octet-stream");
       link.href = rawImage;
       link.download = `cumple-de-${cumpleañero}.jpg`;
       link.click();
-      console.log(canvasCumple);
+      setMsgError("Descarga exitosa!");
+      setMensajeh3(true);
     }
   }
 
@@ -202,7 +195,7 @@ function Clash(){
 
   return(
     <div className="clash">
-
+        <img src='img/cumplepak.jpg' id="primerimg" />
       <section className="preview">
         {isLoading ? <img src="img/puff.svg" className="loadercapa" /> : <canvas id="canvas" width="700" height="450" />}
         <img src={`img/${canvasInfo[0].imgUrl}`} id="templateimg" />
