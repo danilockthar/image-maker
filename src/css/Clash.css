@@ -1,4 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto|Share+Tech+Mono&display=swap');
+
+@keyframes rotacion {
+
+  to{transform: rotate(360deg);}
+}
 
 .templateCard{
   display: grid;
@@ -6,6 +12,9 @@
   grid-gap: 15px;
 }
 .clash{
+
+}
+.estilos{
 
 }
 #templateimg{
@@ -16,7 +25,7 @@
   margin-left: 30px;
 }
 form input{
-  color : tomato;
+  color : #000B7D;
   font-family: Open Sans, sans-serif;
 
 }
@@ -26,20 +35,20 @@ form input[type=text]{
 }
 
 .btndescarga{
-  margin-top: -123px;
+  margin-top: -125px;
   position: absolute;
-  margin-left: 308px;
+  margin-left: 307px;
   transform: rotate(90deg);
   font-size: 25px;
   writing-mode: vertical-lr;
   font-family: Open Sans, sans-serif;
   color: white;
-  height: 85px;
+  height: 87px;
   font-weight: 600;
   border : none;
   padding:10px;
-  width: 160px;
-  background: #d9534f;
+  width: 162px;
+  background: gold;
   cursor: pointer;
   transition: 0.5s;
 }
@@ -47,13 +56,15 @@ form input[type=text]{
   background: #5cb85c;
 }
 .pantallaok{
+  margin-left: 30px;
   color: #5cb85c;
   src: url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,600i,700,700i,800,800i&display=swap');
   font-family: Open Sans, sans-serif;
   font-size: 14px;
 }
 .pantallanotok{
-  color: #d9534f;
+  margin-left: 30px;
+  color: gold;
   src: url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,600i,700,700i,800,800i&display=swap');
   font-family: Open Sans, sans-serif;
   font-size: 14px;
@@ -67,6 +78,7 @@ form input[type=text]{
   height: 500px;
 }
 #canvas{
+  cursor: not-allowed;
   margin-top: 30px;
 }
 .loadercapa{
@@ -119,4 +131,23 @@ form input[type=text]{
   text-align: center;
   height: 40px;
   width: 300px;
+}
+.reloadMsg{
+  color: #d3d3d3;
+  font-family:'Roboto', sans-serif;
+  font-size: 14px;
+  z-index: -1;
+  position: absolute;
+  margin-top: 230px;
+  margin-left: 333px;
+  opacity: 0.7;
+}
+.refreshIcon{
+  width: 20px;
+  position: absolute;
+  margin-left: -30px;
+  animation-name: rotacion;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
 }

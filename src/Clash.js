@@ -1,13 +1,14 @@
 import React, {useState, useEffect } from 'react';
 import './css/Clash.css';
 import LowNav from './LowNav';
-
+import 'font-awesome/css/font-awesome.min.css';
 
 
 function Clash(){
 
 
-
+  let imagen = document.getElementById('templateimg');
+  let canvas = document.getElementById('canvas');
   let midata = {
     id : 0,
     imgUrl : 'cumplepak.jpg',
@@ -54,11 +55,14 @@ function Clash(){
   const [nameTemplate, setNameTemplate] = useState("");
   const [canvasInfo, setCanvasInfo] = useState([midata]);
   const [secondCount, setSecondCount] = useState(0);
+  const [finishLoad, setFinishLoad] = useState(false);
+
 
 
   const fetchData = (e) =>{
     let dataname = e.target.getAttribute('data-value');
     console.log(dataname);
+    setFinishLoad(false);
     setIsLoading(true);
     fetch("http://www.broeders.com.ar/includes/templates.php", {
       method: 'POST',
@@ -73,7 +77,7 @@ function Clash(){
         setCanvasInfo(data);
         setIsLoading(false);
         setCount(count + 1);
-
+        setFinishLoad(true);
       }
     )
       .catch((error) => {
@@ -129,6 +133,7 @@ function Clash(){
 
     canvas.width = imagen.width;
     canvas.height = imagen.height;
+
 
     ctx.clearRect(10, 0, canvas.width, canvas.height);
     ctx.drawImage(imagen, 0, 0);
@@ -208,10 +213,11 @@ function Clash(){
     <section className='templateCard'>
       <section className="preview">
         {isLoading ? <img src="img/puff.svg" className="loadercapa" /> : <canvas id="canvas" width="700" height="450" />}
+
         <img src={`img/${canvasInfo[0].imgUrl}`} id="templateimg" />
 
       </section>
-
+      {finishLoad && <h1 className='reloadMsg'> <img src='img/refresh.png' className="refreshIcon" /> reload the page </h1>}
       <section className="estilos">
 
       <form onKeyUp={handleSubmit} className="datosform">
