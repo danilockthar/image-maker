@@ -10,19 +10,24 @@ box-shadow: 0px 6px 5px -6px rgba(0,0,0,0.75);
 #hiddenDiv{
   overflow-y: scroll;
   z-index: 3;
-  margin-left: 20px;
-  transition: 0.3s;
+  transition: 0.4s;
   display: block;
-  background: #F99D07;
-  width:740px;
-  height: 0px;
+  background:#F99D07;
+  width:0px;
+  height: 535px;
+  position: absolute;
+}
+.github{
+  margin-left: 1100px;
+  width: 30px;
+  margin-top: 5px;
   position: absolute;
 }
 .showTemps{
-
+  outline: none;
   width: 100px;
   height: 40px;
-  margin-left: 20px;
+  margin-left: 50px;
   border : none;
   background: #F99D07;
   padding: 5px;
@@ -31,27 +36,67 @@ box-shadow: 0px 6px 5px -6px rgba(0,0,0,0.75);
   font-family: Open Sans, sans-serif;
   cursor: pointer;
 }
-
+.formContainer{
+  justify-content: center;
+  justify-items: center;
+  background: #000B7D;
+}
+.formaHidde{
+  background:#1d2120;
+  display: block;
+  height: 60px;
+}
+.formaHidde select{
+  margin-left: 100px;
+  margin-top: 15px;
+}
 .botonProps{
-
-  background: #333;
+  margin-top: 15px;
+  background: #000B7D;
   margin-left: 10px;
   display: block;
   cursor: pointer;
-  width: 300px;
+  width: 340px;
   transition: 0.4s;
 }
+
+
 
 .container{
   margin-top: 14px;
   grid-row-gap: 14px;
   justify-items: center;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
 }
-.infoCards h3{
-  color: #000B7D;
-  font-weight: bold;
-  color: #000B7D;
-  font-family: Open Sans, sans-serif;
+
+#barra{
+
+  transition: 0.3s;
+  margin-top: -3px;
+  width: 20px;
+  height: 3px;
+  background: #000B7D;
+}
+#barrab{
+  transition: 0.3s;
+  margin-top: 3px;
+  width: 20px;
+  height: 3px;
+  background: #000B7D;
+}
+#barrac{
+  transition: 0.3s;
+  margin-top: 3px;
+  width: 20px;
+  height: 3px;
+  background: #000B7D;
+}
+.barradiv{
+  margin-left: -5px;
+  margin-top: 5px;
+  position: absolute;
+}
+#span{
+  margin-left: 25px;
 }

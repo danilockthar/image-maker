@@ -7,6 +7,8 @@
 }
 
 .templateCard{
+  margin-left: 20px;
+  margin-top: 10px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 15px;
@@ -157,4 +159,16 @@ form input[type=text]{
   position: absolute;
   margin-top: 5px;
   margin-left: 10px;
+}
+.footerdiv h3{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+}
+.footerdiv{
+  bottom: 0;
+
+  position: fixed;
+  margin-top: -30px;
+margin-left: 280px;
 }

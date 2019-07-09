@@ -18,8 +18,8 @@ function App() {
     <div className="App">
     <Navigation />
     <Switch>
-        <Route path='/' exact component={Canvasimg}/>
-        <Route path='/clash' component={Clash}/>
+        <Route path='/' exact component={Clash}/>
+
         <Route path='/boca' component={Boca}/>
     </Switch>
 
