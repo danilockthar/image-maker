@@ -19,6 +19,7 @@ box-shadow: 0px 6px 5px -6px rgba(0,0,0,0.75);
   position: absolute;
 }
 .showTemps{
+
   width: 100px;
   height: 40px;
   margin-left: 20px;
@@ -32,6 +33,7 @@ box-shadow: 0px 6px 5px -6px rgba(0,0,0,0.75);
 }
 
 .botonProps{
+
   background: #333;
   margin-left: 10px;
   display: block;
@@ -39,16 +41,13 @@ box-shadow: 0px 6px 5px -6px rgba(0,0,0,0.75);
   width: 300px;
   transition: 0.4s;
 }
-.botonProps:hover{
-  transform: scale(1.6) translateX(100px);
-}
-.sectionCards{
+
+.container{
+  margin-top: 14px;
+  grid-row-gap: 14px;
+  justify-items: center;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  justify-content: center;
-  margin: 10px;
-  padding: 15px;
-  background: #de2e10;
 }
 .infoCards h3{
   color: #000B7D;

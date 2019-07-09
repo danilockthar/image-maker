@@ -211,6 +211,7 @@ function Clash(){
     <div className="clash">
     <LowNav setNombre={fetchData} />
     <section className='templateCard'>
+      <img src='img/marco.png' className='marcoimg' />
       <section className="preview">
         {isLoading ? <img src="img/puff.svg" className="loadercapa" /> : <canvas id="canvas" width="700" height="450" />}
 

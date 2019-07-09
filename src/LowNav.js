@@ -63,30 +63,25 @@ function LowNav(props){
         </select>
         <input type="text" placeholder="busqueda" />
         </form>
+        <div className='container'>
         <section className='sectionCards'>
         <img src='img/boca-template.jpg' onClick={props.setNombre} className='botonProps' id='bocaButton' data-value='boca-juniors'/>
-        <div className="infoCards">
-          <h3> BOCA JUNIORS </h3>
-          <p> Tarjeta de invitacion del Club Atletico Boca Juniors </p>
-        </div>
-        </section>
-        <section className='sectionCards'>
-        <img src='img/clash-royale-template.jpg' onClick={props.setNombre} className='botonProps' id='clashButton' data-value='clash-royale'/>
-        <div className="infoCards">
-          <h3> Clash Royale </h3>
-          <p> Tarjeta de invitacion del Club Atletico Boca Juniors </p>
-        </div>
-        </section>
-        <section className='sectionCards'>
-        <img src='img/clash-royale-template.jpg' onClick={props.setNombre} className='botonProps' id='clashButton' data-value='clash-royale'/>
-        </section>
-        <section className='sectionCards'>
-        <img src='img/clash-royale-template.jpg' onClick={props.setNombre} className='botonProps' id='clashButton' data-value='clash-royale'/>
-        </section>
-        <section className='sectionCards'>
-        <img src='img/clash-royale-template.jpg' onClick={props.setNombre} className='botonProps' id='clashButton' data-value='clash-royale'/>
-        </section>
 
+        </section>
+        <section className='sectionCards'>
+        <img src='img/clash-royale-template.jpg' onClick={props.setNombre} className='botonProps' id='clashButton' data-value='clash-royale'/>
+
+        </section>
+        <section className='sectionCards'>
+        <img src='img/clash-royale-template.jpg' onClick={props.setNombre} className='botonProps' id='clashButton' data-value='clash-royale'/>
+        </section>
+        <section className='sectionCards'>
+        <img src='img/clash-royale-template.jpg' onClick={props.setNombre} className='botonProps' id='clashButton' data-value='clash-royale'/>
+        </section>
+        <section className='sectionCards'>
+        <img src='img/clash-royale-template.jpg' onClick={props.setNombre} className='botonProps' id='clashButton' data-value='clash-royale'/>
+        </section>
+        </div>
       </div>
     </div>
   )

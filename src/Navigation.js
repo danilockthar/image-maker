@@ -5,28 +5,14 @@ import './css/Navigation.css';
 
 function Navigation(props) {
 
-  const [toggle, setToggle] = useState(false);
 
-  const toggleHideDiv = ()=>{
-
-    let hidden = document.getElementById('hiddenDiv');
-    if(!toggle){
-      console.log('true');
-      setToggle(true);
-      hidden.style.height = '500px';
-    }else{
-      console.log('false');
-      setToggle(false);
-      hidden.style.height = '0px';
-    }
-  }
 
   return (
     <div className='navigation'>
       <nav>
 
         <NavLink to='/' className="Linktags">
-        <h1 className='logobro'>Logo</h1>
+        <img src='img/amigurises2.png' className='logoimg' />
 
         </NavLink>
         <div className="mislinks">

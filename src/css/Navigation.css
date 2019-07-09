@@ -26,6 +26,11 @@ nav{
 }
 .selected{
   background-color: tomato;
-  padding: 14px;
+  padding: 10px;
   color: white;
+
+}
+.logoimg{
+  margin-left: -330px;
+  width: 150px;
 }
