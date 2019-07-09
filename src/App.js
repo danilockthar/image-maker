@@ -5,7 +5,7 @@ import './App.css';
 import Canvasimg from './Canvasimg';
 import Clash from './Clash';
 import Boca from './Boca';
-
+import LogoIntro from './LogoIntro';
 
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
 
   return (
     <Router>
-
+    <LogoIntro />
     <div className="App">
     <Navigation />
     <Switch>

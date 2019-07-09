@@ -1,0 +1,25 @@
+.logointro{
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: black;
+  z-index: 3;
+  transition: 0.4s;
+}
+.logointro h1{
+  color: white;
+
+}
+.loaderpuff{
+  width: 60px;
+  display: block;
+  margin-left: 660px;
+}
+.desaparecer{
+  display: none;
+}
+.logoamigo{
+  margin-top: 200px;
+  width: 300px;
+}

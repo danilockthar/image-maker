@@ -93,10 +93,11 @@ function LowNav(props){
         </div>
         <div className='container'>
         <section className='sectionCards'>
-
+      
         <img src='img/boca-template.jpg' onClick={props.setNombre} className='botonProps' id='bocaButton' data-value='boca-juniors'/>
 
         </section>
+
         <section className='sectionCards'>
 
         <img src='img/clash-royale-template.jpg' onClick={props.setNombre} className='botonProps' id='clashButton' data-value='clash-royale'/>
