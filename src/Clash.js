@@ -236,7 +236,7 @@ function Clash(){
         <img src={`img/${canvasInfo[0].imgUrl}`} id="templateimg" />
 
       </section>
-      {finishLoad && <h1 className='reloadMsg'> <img src='img/refresh.png' className="refreshIcon" /> reload the page </h1>}
+      {finishLoad && <h1 className='reloadMsg'> <img src='img/spinning-circles.svg' className="refreshIcon" /> reload the page </h1>}
       <section className="estilos">
 
       <form onKeyUp={handleSubmit} className="datosform">

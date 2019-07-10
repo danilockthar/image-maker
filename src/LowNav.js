@@ -131,7 +131,7 @@ function LowNav(props){
         <p className='totalSearch'> Encontrados ({cantidad}) </p>
         </div>
         <div className='container'>
-          {isLoading ? <img src='img/puff.svg' className='loadimg' /> : templates }
+          {isLoading ? <img src='img/ball-triangle.svg' className='loadimg' /> : templates }
 
 
         </div>
