@@ -1,5 +1,5 @@
 import React, {useState, useEffect } from 'react';
-import './css/Clash.css';
+import './css/Boca.css';
 
 
 
@@ -74,40 +74,40 @@ function Boca(){
 
     if(canvasEdad){
 
-      ctx.font = '40px Supercell-Magic';
-      ctx.fillStyle = "#f4ae05";
-      ctx.fillText(miEdad, 520, 60, canvas.width - 50);
-      ctx.strokeText(miEdad, 520, 60, canvas.width - 50);
+      ctx.font = '50px Nemesis Grant';
+      ctx.fillStyle = 'white';
+      ctx.fillText(miEdad, 130, 55, canvas.width - 50);
+
     }
     if(canvasFecha){
-      ctx.font = '25px Supercell-Magic';
-      ctx.fillStyle = "#f4ae05";
-      ctx.fillText(fecha,400, 135, canvas.width - 50);
-      ctx.strokeText(fecha,400, 135, canvas.width - 50);
+      ctx.font = '30px Nemesis Grant';
+      ctx.fillStyle = "#ff2c2c";
+      ctx.fillText(fecha,250, 100, canvas.width - 50);
+
     }
     if(canvasHorario){
-      ctx.font = '25px Supercell-Magic';
-      ctx.fillStyle = "#f4ae05";
-      ctx.fillText(horario, 240, 185, canvas.width - 50);
-      ctx.strokeText(horario, 240, 185, canvas.width - 50);
+      ctx.font = '30px Nemesis Grant';
+      ctx.fillStyle = "#ff2c2c";
+      ctx.fillText(horario, 250, 142, canvas.width - 50);
+
     }
     if(canvasLugar){
-      ctx.font = '25px Supercell-Magic';
-      ctx.fillStyle = "#f4ae05";
-      ctx.fillText(lugar, 320, 235, canvas.width - 50);
-      ctx.strokeText(lugar, 320, 235, canvas.width - 50);
+      ctx.font = '30px Nemesis Grant';
+      ctx.fillStyle = "#ff2c2c";
+      ctx.fillText(lugar, 450, 290, canvas.width - 50);
+
     }
     if(canvasinfoplus){
-      ctx.font = '25px Supercell-Magic';
-      ctx.fillStyle = "#f4ae05";
-      ctx.fillText(infoplus, 330, 283, canvas.width - 50);
-      ctx.strokeText(infoplus, 330, 283, canvas.width - 50);
+      ctx.font = '30px Nemesis Grant';
+      ctx.fillStyle = "#ff2c2c";
+      ctx.fillText(infoplus, 450, 340, canvas.width - 50);
+
     }
     if(canvasCumple){
-      ctx.font = '25px Supercell-Magic';
-      ctx.fillStyle = "#f4ae05";
-      ctx.fillText(cumpleañero, 450, 340, canvas.width - 50);
-      ctx.strokeText(cumpleañero, 450, 340, canvas.width - 50);
+      ctx.font = '50px Nemesis Grant';
+      ctx.fillStyle = "white";
+      ctx.fillText(cumpleañero, 460, 420, canvas.width - 50);
+
     }
     let imgfinal = canvas.toDataURL('image/jpeg', 1.0);
     setImgData(imgfinal);
@@ -139,17 +139,17 @@ function Boca(){
     <div className="clash">
       <section className="preview">
 
-        <img src="img/boca-template.jpg" id="templateimg" />
+        <img src="img/river-template.jpg" id="templateimg" />
         <canvas id="canvas" width="240" height="297" />
       </section>
 
       <section className="estilos">
-      <form onKeyUp={handleSubmit}>
+      <form onKeyUp={handleSubmit} className='formaBoca'>
 
         <label> Mi edad </label>
         <input type="text" placeholder="Mi edad" value={miEdad} onChange={showEdad} />
         <label> Fecha del cumple.</label>
-        <input type="text" placeholder="Ej: 03/12/19" maxLength="8" value={fecha} onChange={showFecha} />
+        <input type="text" placeholder="Ej: 03/12/19"  value={fecha} onChange={showFecha} />
         <label> En que horario </label>
         <input type="text" placeholder="Ej: 18 a 21 hs" value={horario} onChange={showHorario} />
         <label> Direccion </label>
@@ -160,7 +160,7 @@ function Boca(){
       </form>
 
 
-      <button onClick={showData} className="btndescarga"> Listo! </button>
+      <button onClick={showData} className="btndescargaBoca"> Listo! </button>
 
       <h3 className={mensajeh3 ? 'pantallaok': 'pantallanotok'}>  {msgError}</h3>
       </section>

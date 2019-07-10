@@ -149,37 +149,55 @@ function Clash(){
       ctx.font = canvasInfo[0].edadFont;
       ctx.fillStyle = canvasInfo[0].edadFontColor;
       ctx.fillText(miEdad, canvasInfo[0].edadX, canvasInfo[0].edadY, canvas.width - 50);
-      ctx.strokeText(miEdad, canvasInfo[0].edadX, canvasInfo[0].edadY, canvas.width - 50);
+      if(canvasInfo[0].stroke === 1){
+        ctx.strokeText(miEdad, canvasInfo[0].edadX, canvasInfo[0].edadY, canvas.width - 50);
+      }
+
     }
     if(fecha){
       ctx.font = canvasInfo[0].fechaFont;
       ctx.fillStyle = canvasInfo[0].fechaFontColor;
       ctx.fillText(fecha,canvasInfo[0].fechaX, canvasInfo[0].fechaY, canvas.width - 50);
-      ctx.strokeText(fecha,canvasInfo[0].fechaX, canvasInfo[0].fechaY, canvas.width - 50);
+      if(canvasInfo[0].stroke === 1){
+        ctx.strokeText(fecha,canvasInfo[0].fechaX, canvasInfo[0].fechaY, canvas.width - 50);
+      }
+
     }
     if(horario){
       ctx.font = canvasInfo[0].horarioFont;
       ctx.fillStyle = canvasInfo[0].horarioFontColor;
       ctx.fillText(horario, canvasInfo[0].horarioX, canvasInfo[0].horarioY, canvas.width - 50);
-      ctx.strokeText(horario, canvasInfo[0].horarioX, canvasInfo[0].horarioY, canvas.width - 50);
+      if(canvasInfo[0].stroke === 1){
+        ctx.strokeText(horario, canvasInfo[0].horarioX, canvasInfo[0].horarioY, canvas.width - 50);
+      }
+
     }
     if(lugar){
       ctx.font = canvasInfo[0].lugarFont;
       ctx.fillStyle = canvasInfo[0].lugarFontColor;
       ctx.fillText(lugar, canvasInfo[0].lugarX, canvasInfo[0].lugarY, canvas.width - 50);
-      ctx.strokeText(lugar, canvasInfo[0].lugarX, canvasInfo[0].lugarY, canvas.width - 50);
+      if(canvasInfo[0].stroke === 1){
+        ctx.strokeText(lugar, canvasInfo[0].lugarX, canvasInfo[0].lugarY, canvas.width - 50);
+      }
+
     }
     if(infoplus){
       ctx.font = canvasInfo[0].infoplusFont;
       ctx.fillStyle = canvasInfo[0].infoplusFontColor;
       ctx.fillText(infoplus, canvasInfo[0].infoplusX, canvasInfo[0].infoplusY, canvas.width - 50);
-      ctx.strokeText(infoplus, canvasInfo[0].infoplusX, canvasInfo[0].infoplusY, canvas.width - 50);
+      if(canvasInfo[0].stroke === 1){
+          ctx.strokeText(infoplus, canvasInfo[0].infoplusX, canvasInfo[0].infoplusY, canvas.width - 50);
+      }
+
     }
     if(cumpleañero){
       ctx.font = canvasInfo[0].cumpleFont;
       ctx.fillStyle = canvasInfo[0].cumpleFontColor;
       ctx.fillText(cumpleañero, canvasInfo[0].cumpleX, canvasInfo[0].cumpleY, canvas.width - 50);
-      ctx.strokeText(cumpleañero, canvasInfo[0].cumpleX, canvasInfo[0].cumpleY, canvas.width - 50);
+      if(canvasInfo[0].stroke === 1){
+        ctx.strokeText(cumpleañero, canvasInfo[0].cumpleX, canvasInfo[0].cumpleY, canvas.width - 50);
+      }
+
     }
     let imgfinal = canvas.toDataURL('image/jpeg', 1.0);
     setImgData(imgfinal);
@@ -225,7 +243,7 @@ function Clash(){
 
         <input type="text" className='inputEdad' placeholder="10" value={miEdad} maxLength="2" onChange={showEdad} />
 
-        <input type="text" className='inputFecha' placeholder="Ej: 03/12/19" maxLength="8" value={fecha} onChange={showFecha} />
+        <input type="text" className='inputFecha' placeholder="Ej: 03/12/19"  value={fecha} onChange={showFecha} />
 
         <input type="text" className='inputHorario' placeholder="Ej: 18 a 21 hs" maxLength="10" value={horario} onChange={showHorario} />
 

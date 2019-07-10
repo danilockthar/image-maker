@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto|Share+Tech+Mono&display=swap');
+
+@keyframes rotacion {
+
+  to{transform: rotate(360deg);}
+}
+
+.templateCard{
+  margin-left: 20px;
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 15px;
+}
+.clash{
+
+}
+.estilos{
+  margin-left: 60px;
+}
+#templateimg{
+  display: none;
+}
+.datosform{
+  margin-top: 80px;
+  margin-left: 30px;
+}
+.formaBoca{
+  position: absolute;
+  margin-top: -500px;
+  margin-left: 700px;
+}
+.formaBoca input{
+
+  display: block;
+  color : #000B7D;
+  font-family: Open Sans, sans-serif;
+
+}
+form input[type=text]{
+  padding: 5px;
+
+}
+
+.btndescargaBoca{
+  margin-top: -125px;
+  position: absolute;
+  margin-left: 807px;
+  transform: rotate(90deg);
+  font-size: 25px;
+  writing-mode: vertical-lr;
+  font-family: Open Sans, sans-serif;
+  color: white;
+  height: 87px;
+  font-weight: 600;
+  border : none;
+  padding:10px;
+  width: 162px;
+  background:#000B7D;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.btndescarga:hover{
+  background: #5cb85c;
+}
+.pantallaok{
+  margin-left: 30px;
+  color: #5cb85c;
+  src: url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,600i,700,700i,800,800i&display=swap');
+  font-family: Open Sans, sans-serif;
+  font-size: 14px;
+}
+.pantallanotok{
+  margin-left: 30px;
+  color: gold;
+  src: url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,600i,700,700i,800,800i&display=swap');
+  font-family: Open Sans, sans-serif;
+  font-size: 14px;
+}
+
+.preview{
+  margin-left:  14px;
+  text-align: center;
+
+  width: 720px;
+  height: 500px;
+}
+#canvas{
+  margin-left: 14px;
+  cursor: not-allowed;
+  margin-top: 30px;
+}
+.loadercapa{
+  margin-left: 40px;
+  width: 100px;
+  margin-top: 200px;
+}
+#primerimg{
+  display: none;
+}
+
+.inputEdad{
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+  height: 40px;
+  width: 40px;
+}
+.inputFecha{
+
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+  height: 40px;
+  width: 170px;
+}
+.inputHorario{
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+  height: 40px;
+  width: 150px;
+}
+.inputLugar{
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+  height: 40px;
+  width: 300px;
+}
+.inputInfo{
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+  height: 40px;
+  width: 300px;
+}
+.inputCumple{
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+  height: 40px;
+  width: 300px;
+}
+.reloadMsg{
+  color: white;
+  font-family:'Roboto', sans-serif;
+  font-size: 14px;
+  z-index: -1;
+  position: absolute;
+  margin-top: 230px;
+  margin-left: 356px;
+  opacity: 0.7;
+}
+.refreshIcon{
+  width: 20px;
+  position: absolute;
+  margin-left: -35px;
+  animation-name: rotacion;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+.marcoimg{
+  position: absolute;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+.footerdiv h3{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+}
+.footerdiv{
+  bottom: 0;
+
+  position: fixed;
+  margin-top: -30px;
+margin-left: 280px;
+}

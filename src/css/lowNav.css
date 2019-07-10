@@ -72,6 +72,7 @@ select::-ms-expand {
   display: none;
 }
 .select {
+  margin-top: 10px;
   margin-left: 20px;
   position: relative;
   display: flex;
@@ -184,6 +185,6 @@ select {
   font-weight: bold;
   position: absolute;
   margin-top: -45px;
-  margin-left: 400px;
+  margin-left: 500px;
   background: none;
 }

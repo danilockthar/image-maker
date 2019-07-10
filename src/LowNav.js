@@ -10,18 +10,7 @@ function LowNav(props){
   const [myInfo, setMyInfo] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
-  const clashRoyale = {
-    categoria : 'videojuegos',
-    fullName : 'Clash Royale',
-    imgUrl : 'clash-royale-template.jpg',
-    value : 'clash-royale'
-  }
-  const bocaJuniors = {
-    categoria : 'futbol',
-    fullName : 'Boca Juniors',
-    imgUrl : 'boca-template.jpg',
-    value : 'boca-juniors'
-  }
+
   let templates, cantidad;
   let barra = document.getElementById('barra');
   let barrab = document.getElementById('barrab');
@@ -98,7 +87,7 @@ function LowNav(props){
     if(!toggle){
       console.log('true');
       setToggle(true);
-      hidden.style.height = '530px';
+      hidden.style.height = '533px';
       barra.style.transform = 'rotate(40deg)';
       barra.style.transformOrigin = 'top left';
       barrab.style.transform = 'translateX(-300px)';
