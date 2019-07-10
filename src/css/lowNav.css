@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto|Share+Tech+Mono&display=swap');
+
+
 .lowNav{
   border-top: 1px solid grey;
   -webkit-box-shadow: 0px 6px 5px -6px rgba(0,0,0,0.75);
@@ -40,7 +44,7 @@ box-shadow: 0px 6px 5px -6px rgba(0,0,0,0.75);
 .formContainer{
   justify-content: center;
   justify-items: center;
-  background: #000B7D;
+
 }
 .formaHidde{
 
@@ -50,11 +54,57 @@ box-shadow: 0px 6px 5px -6px rgba(0,0,0,0.75);
 
 }
 .formaHidde select{
-
-  margin-left: 100px;
-  margin-top: 15px;
+  margin-top: 8px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background: #2c3e50;
+  background-image: none;
+  color: gold;
+  font-size: 20px;
+  font-family: 'Open Sans', sans-serif;
 }
-
+select::-ms-expand {
+  display: none;
+}
+.select {
+  margin-left: 20px;
+  position: relative;
+  display: flex;
+  width: 20em;
+  height: 3em;
+  line-height: 3;
+  background: #2c3e50;
+  overflow: hidden;
+  border-radius: .25em;
+}
+select {
+  flex: 1;
+  padding: 0 .5em;
+  color: #fff;
+  cursor: pointer;
+}
+.select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 1em;
+  background: #34495e;
+  cursor: pointer;
+  pointer-events: none;
+  -webkit-transition: .25s all ease;
+  -o-transition: .25s all ease;
+  transition: .25s all ease;
+}
+/* Transition */
+.select:hover::after {
+  color: #f39c12;
+}
 .botonProps{
 
   background: #000B7D;
@@ -115,4 +165,25 @@ box-shadow: 0px 6px 5px -6px rgba(0,0,0,0.75);
 }
 #span{
   margin-left: 25px;
+}
+.loadimg{
+  margin-left: 630px;
+  margin-top: 100px;
+  width: 100px;
+
+}
+.selectInput{
+
+  width: 300px;
+  height: 30px;
+}
+.totalSearch{
+  color: gold;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  position: absolute;
+  margin-top: -45px;
+  margin-left: 400px;
+  background: none;
 }

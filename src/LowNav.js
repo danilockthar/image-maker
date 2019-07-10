@@ -7,7 +7,8 @@ function LowNav(props){
 
   const [toggle, setToggle] = useState(false);
   const [categoria, setCategoria] = useState('todos');
-
+  const [myInfo, setMyInfo] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   const clashRoyale = {
     categoria : 'videojuegos',
@@ -21,7 +22,7 @@ function LowNav(props){
     imgUrl : 'boca-template.jpg',
     value : 'boca-juniors'
   }
-
+  let templates, cantidad;
   let barra = document.getElementById('barra');
   let barrab = document.getElementById('barrab');
   let barrac = document.getElementById('barrac');
@@ -30,6 +31,7 @@ function LowNav(props){
 
 
   const fetchData = () =>{
+    setIsLoading(true);
     fetch("http://www.broeders.com.ar/includes/categorias.php", {
       method: 'POST',
       headers: new Headers({
@@ -40,6 +42,8 @@ function LowNav(props){
       .then((response) => response.json())
       .then((json) => {
         console.log(json);
+        setMyInfo(json);
+        setIsLoading(false);
       }
     ).catch((error) => {
         console.error(error);
@@ -54,7 +58,17 @@ function LowNav(props){
 
   useEffect(()=>{
     fetchData();
-  }, [])
+  }, [categoria])
+
+  if(myInfo.length > 0){
+    cantidad = myInfo.length;
+    console.log(cantidad);
+  templates = myInfo.map((info) =>
+    <img src={`img/${info.imgUrl}`} onClick={props.setNombre} className='botonProps' id='bocaButton' data-value={`${info.imgTagName}`}/>
+
+  );
+  }
+
 
   if(toggle){
     window.addEventListener('click', ()=>{
@@ -117,75 +131,20 @@ function LowNav(props){
       <div className='hideDiv' id='hiddenDiv'>
       <div className='formContainer'>
         <form className='formaHidde'>
-
-        <select value={categoria} onChange={onChangeCat}>
-          <option value='todos'> todos </option>
+        <div className='select'>
+        <select value={categoria} onChange={onChangeCat} className='selectInput'>
+          <option value='todos'> Todos </option>
           <option value='futbol'> Futbol </option>
           <option value='videojuegos'> Videojuegos </option>
-
         </select>
-        <input type="text" placeholder="busqueda" />
-
+        </div>
         </form>
+        <p className='totalSearch'> Encontrados ({cantidad}) </p>
         </div>
         <div className='container'>
-        <section className='sectionCards'>
+          {isLoading ? <img src='img/puff.svg' className='loadimg' /> : templates }
 
-        <img src='img/boca-template.jpg' onClick={props.setNombre} className='botonProps' id='bocaButton' data-value='boca-juniors'/>
 
-        </section>
-
-        <section className='sectionCards'>
-
-        <img src='img/clash-royale-template.jpg' onClick={props.setNombre} className='botonProps' id='clashButton' data-value='clash-royale'/>
-
-        </section>
-        <section className='sectionCards'>
-
-        <img src='img/clash-royale-template.jpg' onClick={props.setNombre} className='botonProps' id='clashButton' data-value='clash-royale'/>
-        </section>
-        <section className='sectionCards'>
-
-        <img src='img/clash-royale-template.jpg' onClick={props.setNombre} className='botonProps' id='clashButton' data-value='clash-royale'/>
-        </section>
-        <section className='sectionCards'>
-        <img src='img/clash-royale-template.jpg' onClick={props.setNombre} className='botonProps' id='clashButton' data-value='clash-royale'/>
-        </section>
-        <section className='sectionCards'>
-
-        <img src='img/clash-royale-template.jpg' onClick={props.setNombre} className='botonProps' id='clashButton' data-value='clash-royale'/>
-
-        </section>
-        <section className='sectionCards'>
-
-        <img src='img/clash-royale-template.jpg' onClick={props.setNombre} className='botonProps' id='clashButton' data-value='clash-royale'/>
-
-        </section>
-        <section className='sectionCards'>
-
-        <img src='img/clash-royale-template.jpg' onClick={props.setNombre} className='botonProps' id='clashButton' data-value='clash-royale'/>
-
-        </section>
-        <section className='sectionCards'>
-
-        <img src='img/clash-royale-template.jpg' onClick={props.setNombre} className='botonProps' id='clashButton' data-value='clash-royale'/>
-
-        </section>
-        <section className='sectionCards'>
-
-        <img src='img/clash-royale-template.jpg' onClick={props.setNombre} className='botonProps' id='clashButton' data-value='clash-royale'/>
-
-        </section>
-        <section className='sectionCards'>
-
-        <img src='img/clash-royale-template.jpg' onClick={props.setNombre} className='botonProps' id='clashButton' data-value='clash-royale'/>
-
-        </section>
-        <section className='sectionCards'>
-
-        <img src='img/clash-royale-template.jpg' onClick={props.setNombre} className='botonProps' id='clashButton' data-value='clash-royale'/>
-
-        </section>
         </div>
       </div>
     </div>

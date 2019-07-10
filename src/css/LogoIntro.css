@@ -3,7 +3,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  
+
   background: black;
   z-index: 3;
   transition: 0.4s;
@@ -15,7 +15,7 @@
 .loaderpuff{
   width: 60px;
   display: block;
-  margin-left: 660px;
+  margin-left: 650px;
 }
 .desaparecer{
   display: none;
