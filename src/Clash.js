@@ -227,7 +227,9 @@ function Clash(){
 
   return(
     <div className="clash">
+
     <LowNav setNombre={fetchData} />
+
     <section className='templateCard'>
       <img src='img/marco2.png' className='marcoimg' />
       <section className="preview">
