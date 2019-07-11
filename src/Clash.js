@@ -247,8 +247,8 @@ function Clash(){
 
         <input type="text" className='inputHorario' placeholder="Ej: 18 a 21 hs" maxLength="10" value={horario} onChange={showHorario} />
 
-        <input type="text" className='inputLugar' placeholder="Lugar del cumple" value={lugar} onChange={showLugar} />
-        <input type="text" placeholder="+info" className='inputInfo' value={infoplus} onChange={showMasInfo} />
+        <input type="text" className='inputLugar' placeholder="Dirección" value={lugar} onChange={showLugar} />
+        <input type="text" placeholder="+ info" className='inputInfo' value={infoplus} onChange={showMasInfo} />
         <input type="text" placeholder="Mi nombre es" className='inputCumple' value={cumpleañero} onChange={showCumple} />
       </form>
 

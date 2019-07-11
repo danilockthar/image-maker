@@ -17,7 +17,7 @@ function LowNav(props){
   let barrac = document.getElementById('barrac');
   const buttons = document.getElementsByClassName('botonProps');
   let hidden = document.getElementById('hiddenDiv');
-
+  let fixedSearch = document.getElementById('fixedSearch');
 
   const fetchData = () =>{
     setIsLoading(true);
@@ -76,7 +76,7 @@ function LowNav(props){
       barrab.style.opacity = '1';
       barrac.style.transform = 'rotate(0deg) translateX(0px)';
       barrac.style.transformOrigin = 'bottom left';
-
+      fixedSearch.style.display = 'none';
     })
   }
 
@@ -94,6 +94,7 @@ function LowNav(props){
       barrab.style.opacity = '0';
       barrac.style.transform = 'rotate(-40deg) ';
       barrac.style.transformOrigin = 'bottom left';
+      fixedSearch.style.display = 'block';
     }else{
       console.log('false');
       setToggle(false);
@@ -104,6 +105,7 @@ function LowNav(props){
       barrab.style.opacity = '1';
       barrac.style.transform = 'rotate(0deg) translateX(0px)';
       barrac.style.transformOrigin = 'bottom left';
+      fixedSearch.style.display = 'none';
 
     }
 
@@ -118,20 +120,21 @@ function LowNav(props){
         <a href='https://github.com/danilockthar' target='new_blank'><img src='img/githublogo.png' alt='Github Page' className='github' /></a>
       </div>
       <div className='hideDiv' id='hiddenDiv'>
-      <div className='formContainer'>
+      <div className='formContainer' id='fixedSearch'>
         <form className='formaHidde'>
         <div className='select'>
         <select value={categoria} onChange={onChangeCat} className='selectInput'>
           <option value='todos'> Todos </option>
           <option value='futbol'> Futbol </option>
           <option value='videojuegos'> Videojuegos </option>
+          <option value='dibujos animados'> Dibujos animados </option>
         </select>
         </div>
         </form>
         <p className='totalSearch'> Encontrados ({cantidad}) </p>
         </div>
         <div className='container'>
-          {isLoading ? <img src='img/ball-triangle.svg' className='loadimg' /> : templates }
+          {isLoading ? <img src='img/three-dots.svg' className='loadimg' /> : templates }
 
 
         </div>

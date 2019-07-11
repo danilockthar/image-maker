@@ -44,13 +44,19 @@ box-shadow: 0px 6px 5px -6px rgba(0,0,0,0.75);
 .formContainer{
   justify-content: center;
   justify-items: center;
-
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+  height: 70px;
+  background: #1a1a1d;
+  display: none;
 }
 .formaHidde{
 
   background:#1a1a1d;
   display: block;
-  height: 60px;
+
+
 
 }
 .formaHidde select{
@@ -82,6 +88,7 @@ select::-ms-expand {
   background: #2c3e50;
   overflow: hidden;
   border-radius: .25em;
+
 }
 select {
   flex: 1;
@@ -130,7 +137,7 @@ select {
 }
 
 .container{
-  margin-top: 14px;
+  margin-top: 134px;
   grid-row-gap: 14px;
   justify-items: center;
   display: grid;

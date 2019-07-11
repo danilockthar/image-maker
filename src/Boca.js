@@ -74,39 +74,39 @@ function Boca(){
 
     if(canvasEdad){
 
-      ctx.font = '50px Nemesis Grant';
-      ctx.fillStyle = 'white';
-      ctx.fillText(miEdad, 130, 55, canvas.width - 50);
+      ctx.font = '60px Waltograph';
+      ctx.fillStyle = '#ff2c2c';
+      ctx.fillText(miEdad, 430, 110, canvas.width - 50);
 
     }
     if(canvasFecha){
-      ctx.font = '30px Nemesis Grant';
+      ctx.font = '50px Waltograph';
       ctx.fillStyle = "#ff2c2c";
-      ctx.fillText(fecha,250, 100, canvas.width - 50);
+      ctx.fillText(fecha, 500, 180, canvas.width - 50);
 
     }
     if(canvasHorario){
-      ctx.font = '30px Nemesis Grant';
+      ctx.font = '50px Waltograph';
       ctx.fillStyle = "#ff2c2c";
-      ctx.fillText(horario, 250, 142, canvas.width - 50);
+      ctx.fillText(horario, 500, 235, canvas.width - 50);
 
     }
     if(canvasLugar){
-      ctx.font = '30px Nemesis Grant';
+      ctx.font = '50px Waltograph';
       ctx.fillStyle = "#ff2c2c";
-      ctx.fillText(lugar, 450, 290, canvas.width - 50);
+      ctx.fillText(lugar, 500, 290, canvas.width - 50);
 
     }
     if(canvasinfoplus){
-      ctx.font = '30px Nemesis Grant';
+      ctx.font = '50px Waltograph';
       ctx.fillStyle = "#ff2c2c";
-      ctx.fillText(infoplus, 450, 340, canvas.width - 50);
+      ctx.fillText(infoplus, 500, 340, canvas.width - 50);
 
     }
     if(canvasCumple){
-      ctx.font = '50px Nemesis Grant';
-      ctx.fillStyle = "white";
-      ctx.fillText(cumpleañero, 460, 420, canvas.width - 50);
+      ctx.font = '80px Waltograph';
+      ctx.fillStyle = "#ff2c2c";
+      ctx.fillText(cumpleañero, 570, 410, canvas.width - 50);
 
     }
     let imgfinal = canvas.toDataURL('image/jpeg', 1.0);
@@ -139,7 +139,7 @@ function Boca(){
     <div className="clash">
       <section className="preview">
 
-        <img src="img/river-template.jpg" id="templateimg" />
+        <img src="img/mickey-template.jpg" id="templateimg" />
         <canvas id="canvas" width="240" height="297" />
       </section>
 
