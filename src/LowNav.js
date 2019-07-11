@@ -87,7 +87,7 @@ function LowNav(props){
     if(!toggle){
       console.log('true');
       setToggle(true);
-      hidden.style.height = '533px';
+      hidden.style.height = '535px';
       barra.style.transform = 'rotate(40deg)';
       barra.style.transformOrigin = 'top left';
       barrab.style.transform = 'translateX(-300px)';
@@ -124,7 +124,7 @@ function LowNav(props){
         <form className='formaHidde'>
         <div className='select'>
         <select value={categoria} onChange={onChangeCat} className='selectInput'>
-          <option value='todos'> Todos </option>
+          <option value='todos'> Todas </option>
           <option value='futbol'> Futbol </option>
           <option value='videojuegos'> Videojuegos </option>
           <option value='dibujos animados'> Dibujos animados </option>
@@ -136,6 +136,9 @@ function LowNav(props){
         <div className='container'>
           {isLoading ? <img src='img/three-dots.svg' className='loadimg' /> : templates }
 
+
+        </div>
+        <div className='hiddenFooter'>
 
         </div>
       </div>

@@ -28,7 +28,7 @@
 }
 form input{
   color : #000B7D;
-  font-family: Open Sans, sans-serif;
+  font-family: 'Gotham Rounded', sans-serif;
 
 }
 form input[type=text]{
@@ -43,7 +43,7 @@ form input[type=text]{
   transform: rotate(90deg);
   font-size: 25px;
   writing-mode: vertical-lr;
-  font-family: Open Sans, sans-serif;
+  font-family: 'Gotham Rounded', sans-serif;
   color: white;
   height: 87px;
   font-weight: 600;
@@ -161,9 +161,13 @@ form input[type=text]{
   margin-left: 10px;
 }
 .footerdiv h3{
+  color: #e92c28;
   font-family: 'Open Sans', sans-serif;
   font-size: 12px;
   font-weight: bold;
+}
+.footerdiv a{
+  color: #e92c28;
 }
 .footerdiv{
   bottom: 0;

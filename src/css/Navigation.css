@@ -20,8 +20,7 @@ nav{
 .Linktags{
   text-decoration: none;
   color: #f94444;
-  font-family: Open Sans, sans-serif;
-  src: url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,600i,700,700i,800,800i&display=swap');
+  font-family: 'Gotham Rounded', sans-serif;
   font-weight: bold;
   font-size: 15px;
   margin-left: 50px;

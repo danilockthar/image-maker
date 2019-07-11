@@ -19,9 +19,9 @@ function Navigation(props) {
           HOME
         </NavLink>
         <NavLink to='/boca' className="Linktags" activeClassName="selected">
-          Boca Juniors
+          Test
         </NavLink>
-        
+
         </div>
 
       </nav>
