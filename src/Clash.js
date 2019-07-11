@@ -229,7 +229,7 @@ function Clash(){
     <div className="clash">
     <LowNav setNombre={fetchData} />
     <section className='templateCard'>
-      <img src='img/marco.png' className='marcoimg' />
+      <img src='img/marco2.png' className='marcoimg' />
       <section className="preview">
         {isLoading ? <img src="img/puff.svg" className="loadercapa" /> : <canvas id="canvas" width="700" height="450" />}
 
@@ -262,7 +262,7 @@ function Clash(){
 
     </section>
     <div class='footerdiv'>
-      <h3>Amigurises 2019 - creado por <a href='http://www.broeders.com.ar/' target='new_blank'>Dani Arroyo</a></h3>
+      <h3>Amigurises  © 2019 - creado por <a href='http://www.broeders.com.ar/' target='new_blank'>Dani Arroyo</a></h3>
     </div>
     </div>
   )

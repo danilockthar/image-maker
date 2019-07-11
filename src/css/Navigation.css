@@ -4,7 +4,7 @@
 nav{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background: #000B7D;
+  background: #16324F;
   align-content: center;
   margin: auto;
 
@@ -27,7 +27,7 @@ nav{
   transition: 0.4s;
 }
 .selected{
-  background-color: tomato;
+  background-color: #D7263D;
   padding: 10px;
   color: white;
 
