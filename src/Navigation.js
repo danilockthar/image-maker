@@ -13,13 +13,11 @@ function Navigation(props) {
 
         <NavLink to='/' className="Linktags">
         <img src='img/amigurises2.png' className='logoimg' />
+
         </NavLink>
         <div className="mislinks">
         <NavLink exact to='/' className="Linktags" activeClassName="selected">
           HOME
-        </NavLink>
-        <NavLink to='/boca' className="Linktags" activeClassName="selected">
-          Test
         </NavLink>
 
         </div>

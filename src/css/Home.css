@@ -1,0 +1,25 @@
+
+@font-face {
+font-family: 'Gotham Medium';
+Src: url('../fuentes/GothamMedium.ttf');
+font-display: optional;
+}
+@font-face {
+font-family: 'Gotham Light';
+Src: url('../fuentes/GothamLight.ttf');
+font-display: optional;
+}
+*{
+  text-align: center;
+}
+.homeTitulo{
+  margin-top: 200px;
+  font-family: 'Gotham Medium';
+  font-size: 60px;
+  color: #D7263D;
+}
+.descTitulo{
+  font-family: 'Gotham Light';
+  font-size: 20px;
+  color: white;
+}
