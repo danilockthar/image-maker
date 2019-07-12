@@ -9,6 +9,11 @@ Src: url('../fuentes/GothamMedium.ttf');
 font-display: optional;
 }
 @font-face {
+font-family: 'Gotham Light';
+Src: url('../fuentes/GothamLight.ttf');
+font-display: optional;
+}
+@font-face {
 font-family: 'Supercell-Magic';
 Src: url('../fuentes/Supercell-magic-webfont.ttf');
 font-display: optional;
@@ -194,4 +199,12 @@ form input[type=text]{
   position: fixed;
   margin-top: -30px;
 margin-left: 280px;
+}
+.rendering{
+  font-size: 14px;
+  font-family: 'Gotham Light', sans-serif;
+  color: gold;
+  margin-top: -0.5px;
+  margin-left: 315px;
+  position: absolute;
 }

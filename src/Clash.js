@@ -56,7 +56,7 @@ function Clash(){
   const [canvasInfo, setCanvasInfo] = useState([midata]);
   const [secondCount, setSecondCount] = useState(0);
   const [finishLoad, setFinishLoad] = useState(false);
-
+  const [msgRender, setMsgRender] = useState('');
 
 
   const fetchData = (e) =>{
@@ -143,6 +143,7 @@ function Clash(){
   }
   const showFecha = (e) => {
     setFecha(e.target.value);
+  
   }
   const showHorario = (e) => {
     setHorario(e.target.value);
@@ -233,7 +234,7 @@ function Clash(){
     }
     let imgfinal = canvas.toDataURL('image/jpeg', 1.0);
     setImgData(imgfinal);
-
+    setMsgRender('renderizando');
   }
   const showData = () =>{
     if(cumpleañero === ""){
@@ -257,6 +258,11 @@ function Clash(){
       setMsgError("");
     },5000);
   }
+  if(msgRender){
+    setTimeout(()=>{
+      setMsgRender("");
+    },1000);
+  }
 
   return(
     <div className="clash">
@@ -266,6 +272,7 @@ function Clash(){
     <section className='templateCard'>
       <img src='img/marco2.png' className='marcoimg' />
       <section className="preview">
+      <h3 className='rendering'>  {msgRender}</h3>
         {isLoading ? <img src="img/puff.svg" className="loadercapa" /> : <canvas id="canvas" width="700" height="450" />}
 
         <img src={`img/${canvasInfo[0].imgUrl}`} id="templateimg" />
