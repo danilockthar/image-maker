@@ -51,19 +51,11 @@ function LowNav(props){
 
   if(myInfo.length > 0){
     cantidad = myInfo.length;
-    console.log('cantidad',cantidad);
+
   templates = myInfo.map((info) =>
     <img src={`img/${info.imgUrl}`} onClick={props.setNombre} className='botonProps' id='bocaButton' data-value={`${info.imgTagName}`}/>
 
   );
-  }
-
-
-  if(toggle){
-    window.addEventListener('click', ()=>{
-
-      console.log(' out');
-    })
   }
 
   for(let boton of buttons){
@@ -87,7 +79,7 @@ function LowNav(props){
     if(!toggle){
       console.log('true');
       setToggle(true);
-      hidden.style.height = '535px';
+      hidden.style.height = '85.7vh';
       barra.style.transform = 'rotate(40deg)';
       barra.style.transformOrigin = 'top left';
       barrab.style.transform = 'translateX(-300px)';

@@ -232,7 +232,7 @@ function Clash(){
       link.href = rawImage;
       link.download = `cumple-de-${cumpleañero}.jpg`;
       link.click();
-      setMsgError("Descarga exitosa!");
+      setMsgError(`cumple-de-${cumpleañero}.jpg ha sido descargado con exito!`);
       setMensajeh3(true);
     }
   }
@@ -240,7 +240,7 @@ function Clash(){
   if(msgError){
     setTimeout(()=>{
       setMsgError("");
-    },3000);
+    },5000);
   }
 
   return(
