@@ -1,21 +1,27 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Roboto|Share+Tech+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+
 
 @font-face {
 font-family: 'Gotham Medium';
 Src: url('../fuentes/GothamMedium.ttf');
+font-display: optional;
 }
 @font-face {
 font-family: 'Supercell-Magic';
 Src: url('../fuentes/Supercell-magic-webfont.ttf');
+font-display: optional;
 }
 @font-face {
 font-family: 'Nemesis Grant';
 Src: url('../fuentes/Nemesis Grant.otf');
+font-display: optional;
 }
 @font-face {
 font-family: 'Waltograph';
 Src: url('../fuentes/waltographUI.ttf');
+font-display: optional;
 }
 
 .templateCard{
@@ -55,7 +61,7 @@ form input[type=text]{
   transform: rotate(90deg);
   font-size: 25px;
   writing-mode: vertical-lr;
-  font-family: 'Gotham Rounded', sans-serif;
+  font-family: 'Gotham Medium', sans-serif;
   color: white;
   height: 87px;
   font-weight: 600;

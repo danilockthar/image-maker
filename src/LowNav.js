@@ -51,7 +51,7 @@ function LowNav(props){
 
   if(myInfo.length > 0){
     cantidad = myInfo.length;
-    console.log(cantidad);
+    console.log('cantidad',cantidad);
   templates = myInfo.map((info) =>
     <img src={`img/${info.imgUrl}`} onClick={props.setNombre} className='botonProps' id='bocaButton' data-value={`${info.imgTagName}`}/>
 

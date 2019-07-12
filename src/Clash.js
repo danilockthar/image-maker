@@ -13,27 +13,27 @@ function Clash(){
     id : 0,
     imgUrl : 'cumplepak.jpg',
     imgTagName : '',
-    edadFont : '',
+    edadFont : '50px Arial',
     edadFontColor : '',
     edadX : 0,
     edadY : 0,
-    fechaFont : '',
+    fechaFont : '50px Arial',
     fechaFontColor : '',
     fechaX : 0,
     fechaY : 0,
-    horarioFont : '',
+    horarioFont : '50px Arial',
     horarioFontColor : '',
     horarioX : 0,
     horarioY : 0,
-    lugarFont : '',
+    lugarFont : '50px Arial',
     lugarFontColor : '',
     lugarX : 0,
     lugarY : 0,
-    infoplusFont: '',
+    infoplusFont: '50px Arial',
     infoplusFontColor : '',
     infoplusX: 0,
     infoplusY : 0,
-    cumpleFont: '',
+    cumpleFont: '50px Arial',
     cumpleFontColor : '',
     cumpleX : 0,
     cumpleY: 0,
@@ -88,8 +88,26 @@ function Clash(){
       let name = e.target.getAttribute('data-value');
       setNameTemplate(name);
       console.log(name);
-      setSecondCount(secondCount + 1);
+
     }
+    useEffect(()=>{
+        makeCanvas();
+    },[count])
+    useEffect(()=>{
+        makeCanvas();
+    },[fecha])
+    useEffect(()=>{
+        makeCanvas();
+    },[horario])
+    useEffect(()=>{
+        makeCanvas();
+    },[lugar])
+    useEffect(()=>{
+        makeCanvas();
+    },[infoplus])
+    useEffect(()=>{
+        makeCanvas();
+    },[cumpleañero])
 
 
     useEffect(()=>{
@@ -106,6 +124,7 @@ function Clash(){
 
   const showEdad = (e) => {
     setMiEdad(e.target.value)
+
   }
   const showFecha = (e) => {
     setFecha(e.target.value);
@@ -125,8 +144,6 @@ function Clash(){
 
   const makeCanvas = ()=>{
 
-
-
     let imagen = document.getElementById('templateimg');
     let canvas = document.getElementById('canvas');
     let ctx = canvas.getContext("2d");
@@ -141,9 +158,9 @@ function Clash(){
     ctx.textAlign = "center";
     ctx.strokeStyle = "black";
     ctx.lineWidth = 2;
+    ctx.font= '30px Arial';
+    ctx.fillStyle = 'black';
 
-    console.log('makecanvas ejecutand');
-    console.log(count + 1);
     if(miEdad){
 
       ctx.font = canvasInfo[0].edadFont;
@@ -201,6 +218,7 @@ function Clash(){
     }
     let imgfinal = canvas.toDataURL('image/jpeg', 1.0);
     setImgData(imgfinal);
+
   }
   const showData = () =>{
     if(cumpleañero === ""){
