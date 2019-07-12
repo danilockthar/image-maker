@@ -87,29 +87,41 @@ function Clash(){
     const setNombre = (e)=>{
       let name = e.target.getAttribute('data-value');
       setNameTemplate(name);
-      
+
 
     }
     useEffect(()=>{
         makeCanvas();
     },[count])
     useEffect(()=>{
+      const timer = setTimeout(()=>{
         makeCanvas();
+      },200);
     },[miEdad])
     useEffect(()=>{
+      const timer = setTimeout(()=>{
         makeCanvas();
+      },200);
     },[fecha])
     useEffect(()=>{
+      const timer = setTimeout(()=>{
         makeCanvas();
+      },200);
     },[horario])
     useEffect(()=>{
+      const timer = setTimeout(()=>{
         makeCanvas();
+      },200);
     },[lugar])
     useEffect(()=>{
+      const timer = setTimeout(()=>{
         makeCanvas();
+      },200);
     },[infoplus])
     useEffect(()=>{
+      const timer = setTimeout(()=>{
         makeCanvas();
+      },200);
     },[cumpleañero])
 
 
