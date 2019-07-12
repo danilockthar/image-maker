@@ -87,12 +87,15 @@ function Clash(){
     const setNombre = (e)=>{
       let name = e.target.getAttribute('data-value');
       setNameTemplate(name);
-      console.log(name);
+      
 
     }
     useEffect(()=>{
         makeCanvas();
     },[count])
+    useEffect(()=>{
+        makeCanvas();
+    },[miEdad])
     useEffect(()=>{
         makeCanvas();
     },[fecha])
