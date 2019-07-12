@@ -96,27 +96,27 @@ function Clash(){
     useEffect(()=>{
       const timer = setTimeout(()=>{
         makeCanvas();
-      },200);
+      },600);
     },[miEdad])
     useEffect(()=>{
       const timer = setTimeout(()=>{
         makeCanvas();
-      },200);
+      },600);
     },[fecha])
     useEffect(()=>{
       const timer = setTimeout(()=>{
         makeCanvas();
-      },200);
+      },600);
     },[horario])
     useEffect(()=>{
       const timer = setTimeout(()=>{
         makeCanvas();
-      },200);
+      },600);
     },[lugar])
     useEffect(()=>{
       const timer = setTimeout(()=>{
         makeCanvas();
-      },200);
+      },600);
     },[infoplus])
     useEffect(()=>{
       const timer = setTimeout(()=>{
