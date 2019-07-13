@@ -10,10 +10,29 @@
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <link rel="preload" href="%PUBLIC_URL%/fuentes/Supercell-magic-webfont.ttf" as="font" crossorigin>
-    <link rel="preload" href="%PUBLIC_URL%/fuentes/Nemesis Grant.otf" as="font" crossorigin>
-    <link rel="preload" href="%PUBLIC_URL%/fuentes/GothamLight.ttf" as="font" crossorigin>
-    <link rel="preload" href="%PUBLIC_URL%/fuentes/waltographUI.ttf" as="font" crossorigin>
+    <link rel="preload" href="%PUBLIC_URL%/fuentes/Supercell-magic-webfont.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="%PUBLIC_URL%/fuentes/Nemesis Grant.otf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="%PUBLIC_URL%/fuentes/GothamLight.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="%PUBLIC_URL%/fuentes/waltographUI.ttf" as="font" type="font/ttf" crossorigin>
+
+    <style>
+    @font-face {
+      font-family: 'Supercell-Magic';
+      src: url("%PUBLIC_URL%/fuentes/Supercell-magic-webfont.ttf");
+        }
+    @font-face {
+      font-family: 'Nemesis Grant';
+      src: url("%PUBLIC_URL%/fuentes/Nemesis Grant.otf");
+        }
+    @font-face {
+      font-family: 'Waltograph';
+      src: url("%PUBLIC_URL%/fuentes/waltographUI.ttf");
+        }
+    @font-face {
+      font-family: 'Gotham Ligth';
+      src: url("%PUBLIC_URL%/fuentes/GothamLight.ttf");
+        }
+    </style>
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
