@@ -93,37 +93,7 @@ function Clash(){
     useEffect(()=>{
         makeCanvas();
     },[count])
-    useEffect(()=>{
-      const timer = setTimeout(()=>{
-        makeCanvas();
-      },300);
-    },[miEdad])
-    useEffect(()=>{
-      const timer = setTimeout(()=>{
-        makeCanvas();
-      },300);
-    },[fecha])
-    useEffect(()=>{
-      const timer = setTimeout(()=>{
-        makeCanvas();
-      },300);
-    },[horario])
-    useEffect(()=>{
-      const timer = setTimeout(()=>{
-        makeCanvas();
-      },300);
-    },[lugar])
-    useEffect(()=>{
-      const timer = setTimeout(()=>{
-        makeCanvas();
-      },300);
-    },[infoplus])
-    useEffect(()=>{
-      const timer = setTimeout(()=>{
-        makeCanvas();
-      },200);
-    },[cumpleañero])
-
+  
 
     useEffect(()=>{
       const timer = setTimeout(()=>{
@@ -143,7 +113,7 @@ function Clash(){
   }
   const showFecha = (e) => {
     setFecha(e.target.value);
-  
+
   }
   const showHorario = (e) => {
     setHorario(e.target.value);
@@ -293,8 +263,12 @@ function Clash(){
         <input type="text" placeholder="+ info" className='inputInfo' value={infoplus} onChange={showMasInfo} />
         <input type="text" placeholder="mi nombre es" className='inputCumple' value={cumpleañero} onChange={showCumple} />
       </form>
-
-
+      <div>
+      <p className='invisible'> supercell </p>
+      <p className='invisible1'> nemesis grant </p>
+      <p className='invisible2'> walt disney </p>
+      <p className='invisible3'> direccion </p>
+      </div>
       <button onClick={showData} className="btndescarga"> Listo ! </button>
 
       <h3 className={mensajeh3 ? 'pantallaok': 'pantallanotok'}>  {msgError}</h3>

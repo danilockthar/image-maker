@@ -3,32 +3,22 @@
 @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
 
 
-@font-face {
-font-family: 'Gotham Medium';
-Src: url('../fuentes/GothamMedium.ttf');
-font-display: optional;
-}
-@font-face {
-font-family: 'Gotham Light';
-Src: url('../fuentes/GothamLight.ttf');
-font-display: optional;
-}
-@font-face {
-font-family: 'Supercell-Magic';
-Src: url('../fuentes/Supercell-magic-webfont.ttf');
-font-display: optional;
-}
-@font-face {
-font-family: 'Nemesis Grant';
-Src: url('../fuentes/Nemesis Grant.otf');
-font-display: optional;
-}
-@font-face {
-font-family: 'Waltograph';
-Src: url('../fuentes/waltographUI.ttf');
-font-display: optional;
-}
+.invisible{
+  font-family: 'Supercell-Magic';
 
+}
+.invisible1{
+  font-family: 'Nemesis Grant';
+
+}
+.invisible2{
+  font-family: 'Waltograph';
+
+}
+.invisible3{
+  font-family: 'Gotham Medium';
+
+}
 .templateCard{
   margin-left: 20px;
   margin-top: 10px;
