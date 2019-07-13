@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import './css/lowNav.css';
-import 'font-awesome/css/font-awesome.min.css';
+
 
 
 function LowNav(props){

@@ -1,7 +1,7 @@
 import React, {useState, useEffect } from 'react';
 import './css/Clash.css';
 import LowNav from './LowNav';
-import 'font-awesome/css/font-awesome.min.css';
+
 
 
 function Clash(){
@@ -93,7 +93,7 @@ function Clash(){
     useEffect(()=>{
         makeCanvas();
     },[count])
-  
+
 
     useEffect(()=>{
       const timer = setTimeout(()=>{
