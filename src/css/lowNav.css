@@ -5,29 +5,91 @@
 font-family: 'Gotham Medium';
 Src: url('../fuentes/GothamMedium.ttf');
 }
-.lowNav{
-  border-top: 1px solid grey;
+.lowNavBar{
+  
   -webkit-box-shadow: 0px 6px 5px -6px rgba(0,0,0,0.75);
 -moz-box-shadow: 0px 6px 5px -6px rgba(0,0,0,0.75);
 box-shadow: 0px 6px 5px -6px rgba(0,0,0,0.75);
   background: #D7263D;
   width: 100%;
   height: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  text-align: center;
+}
+.fbshare{
 
+  display: block;
+}
+
+.shareButton{
+  outline: none;
+  background: #3b5998;
+  color: white;
+  border: none;
+  padding: 5px;
+  width: 90px;
+  height: 35px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  position: inline;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.shareButton:hover{
+  background: #324d85;
+}
+.iconFacebook{
+  position: absolute;
 }
 .showTemps{
+  margin-top: -7px;
   outline: none;
   width: 100px;
   height: 40px;
-  margin-left: 50px;
+  margin-left: -280px;
   border : none;
-  background: #D7263D;
-  padding: 5px;
+  display: grid;
+  grid-template-columns: 20px 40px;
+
   font-weight: bold;
   color: #000B7D;
   font-family: 'Gotham Medium', sans-serif;
   cursor: pointer;
+  user-select: none;
 }
+#barra{
+
+  transition: 0.3s;
+  margin-top: -3px;
+  width: 20px;
+  height: 3px;
+  background: #000B7D;
+}
+#barrab{
+  transition: 0.3s;
+  margin-top: 3px;
+  width: 20px;
+  height: 3px;
+  background: #000B7D;
+}
+#barrac{
+  transition: 0.3s;
+  margin-top: 3px;
+  width: 20px;
+  height: 3px;
+  background: #000B7D;
+}
+.barradiv{
+  margin-top: 20px;
+  margin-left: -5px;
+}
+
 #hiddenDiv{
   overflow-y: scroll;
   z-index: 3;
@@ -44,10 +106,8 @@ box-shadow: 0px 6px 5px -6px rgba(0,0,0,0.75);
   background: #1a1a1d
 }
 .github{
-  margin-left: 1100px;
+
   width: 30px;
-  margin-top: 5px;
-  position: absolute;
 }
 
 .formContainer{
@@ -153,36 +213,7 @@ select {
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-#barra{
 
-  transition: 0.3s;
-  margin-top: -3px;
-  width: 20px;
-  height: 3px;
-  background: #000B7D;
-}
-#barrab{
-  transition: 0.3s;
-  margin-top: 3px;
-  width: 20px;
-  height: 3px;
-  background: #000B7D;
-}
-#barrac{
-  transition: 0.3s;
-  margin-top: 3px;
-  width: 20px;
-  height: 3px;
-  background: #000B7D;
-}
-.barradiv{
-  margin-left: -5px;
-  margin-top: 4px;
-  position: absolute;
-}
-#span{
-  margin-left: 25px;
-}
 .loadimg{
   margin-left: 630px;
   margin-top: 100px;

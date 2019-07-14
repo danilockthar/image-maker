@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import './css/lowNav.css';
-
+import {  FacebookShareButton, FacebookIcon } from 'react-share';
 
 
 function LowNav(props){
@@ -107,10 +107,19 @@ function LowNav(props){
 
   return(
     <div className='navLow'>
-      <div className='lowNav'>
-        <button className='showTemps' onClick={toggleHideDiv} > <section className='barradiv'><div id='barra'></div> <div id='barrab'></div> <div id='barrac'></div></section> <span id='span'></span>COLECCIÓN  </button>
-        <a href='https://github.com/danilockthar' target='new_blank'><img src='img/githublogo.png' alt='Github Page' className='github' /></a>
-      </div>
+      <nav className='lowNavBar'>
+        <div className='showTemps' onClick={toggleHideDiv} >
+          <div className='barradiv'>
+            <div id='barra'></div>
+            <div id='barrab'></div>
+            <div id='barrac'></div>
+          </div>
+          <p> COLECCIÓN </p>
+        </div>
+
+        <a href='https://github.com/danilockthar' target='new_blank'>github</a>
+        <FacebookShareButton url='https://www.broeders.com.ar' className='fbshare'><button className='shareButton'> Compartir </button>  </FacebookShareButton>
+      </nav>
       <div className='hideDiv' id='hiddenDiv'>
       <div className='formContainer' id='fixedSearch'>
         <form className='formaHidde'>
