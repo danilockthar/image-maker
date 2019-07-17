@@ -6,7 +6,7 @@ import Canvasimg from './Canvasimg';
 import Clash from './Clash';
 import Boca from './Boca';
 import LogoIntro from './LogoIntro';
-
+import Amigurises from './Amigurises';
 
 function App() {
 
@@ -18,11 +18,11 @@ function App() {
     <div className="App">
     <Navigation />
     <Switch>
-        <Route path='/' exact component={Clash}/>
-
+        <Route path='/' exact component={Amigurises}/>
+        <Route path='/app' component={Clash}/>
         <Route path='/boca' component={Boca}/>
     </Switch>
-
+        
     </div>
     </Router>
   );

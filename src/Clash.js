@@ -356,14 +356,7 @@ function Clash() {
           </h3>
         </section>
       </section>
-      <div class="footerdiv">
-        <h3>
-          Amigurises © 2019 - creado por{" "}
-          <a href="http://www.broeders.com.ar/" target="new_blank">
-            Dani Arroyo
-          </a>
-        </h3>
-      </div>
+    
     </div>
   );
 }

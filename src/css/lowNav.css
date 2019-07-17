@@ -6,59 +6,27 @@ font-family: 'Gotham Medium';
 Src: url('../fuentes/GothamMedium.ttf');
 }
 .lowNavBar{
-  
-  -webkit-box-shadow: 0px 6px 5px -6px rgba(0,0,0,0.75);
--moz-box-shadow: 0px 6px 5px -6px rgba(0,0,0,0.75);
-box-shadow: 0px 6px 5px -6px rgba(0,0,0,0.75);
-  background: #D7263D;
-  width: 100%;
-  height: 40px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  overflow: hidden;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  justify-items: center;
-  text-align: center;
-}
-.fbshare{
-
-  display: block;
-}
-
-.shareButton{
-  outline: none;
-  background: #3b5998;
-  color: white;
-  border: none;
-  padding: 5px;
-  width: 90px;
-  height: 35px;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: bold;
-  position: inline;
-  transition: 0.3s;
-  cursor: pointer;
-}
-.shareButton:hover{
-  background: #324d85;
-}
-.iconFacebook{
+  margin-left: 500px;
+  margin-top: -50px;
   position: absolute;
+  background: none;
+  width: 200px;
+
 }
+
+
 .showTemps{
   margin-top: -7px;
   outline: none;
   width: 100px;
   height: 40px;
-  margin-left: -280px;
+  color: #dcbb38;
+  margin-left: 400px;
   border : none;
   display: grid;
   grid-template-columns: 20px 40px;
-
+  font-size: 15px;
   font-weight: bold;
-  color: #000B7D;
   font-family: 'Gotham Medium', sans-serif;
   cursor: pointer;
   user-select: none;
@@ -69,21 +37,21 @@ box-shadow: 0px 6px 5px -6px rgba(0,0,0,0.75);
   margin-top: -3px;
   width: 20px;
   height: 3px;
-  background: #000B7D;
+  background:#dcbb38;
 }
 #barrab{
   transition: 0.3s;
   margin-top: 3px;
   width: 20px;
   height: 3px;
-  background: #000B7D;
+  background: #dcbb38;
 }
 #barrac{
   transition: 0.3s;
   margin-top: 3px;
   width: 20px;
   height: 3px;
-  background: #000B7D;
+  background: #dcbb38;
 }
 .barradiv{
   margin-top: 20px;
@@ -91,6 +59,7 @@ box-shadow: 0px 6px 5px -6px rgba(0,0,0,0.75);
 }
 
 #hiddenDiv{
+  margin-top: -10px;
   overflow-y: scroll;
   z-index: 3;
   transition: 0.4s;
@@ -111,6 +80,7 @@ box-shadow: 0px 6px 5px -6px rgba(0,0,0,0.75);
 }
 
 .formContainer{
+  
   justify-content: center;
   justify-items: center;
   position: fixed;
