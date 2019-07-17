@@ -6,8 +6,97 @@
   from{opacity: 0; transform: scale(0.8);}
   to{opacity: 1; transform: scale(1);}
 }
+.clash{
+  margin-top: 50px;
+}
+.cumpleforma{
+  display: grid;
+  grid-template-areas: "edad fecha fecha horario horario"
+                       "direccion direccion direccion direccion listo"
+                       "info info info info listo"
+                       "nombre nombre nombre nombre listo";
+  grid-template-columns: 70px 100px 100px 100px 100px;
+  grid-template-rows: 60px 60px 60px 60px;
+  color : #D7263D;
+  font-family: 'Gotham Medium', sans-serif;
+  margin-top: 70px;
+}
+.cumpleforma input[type=text]{
+  padding: 5px;
+}
+.cumpleedad{
+  grid-area: edad;
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+}
+.cumplefecha{
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+  grid-area: fecha;
+}
+.cumplehorario{
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+  grid-area: horario;
+}
+.cumplelugar{
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+  grid-area: direccion;
+}
 
+.cumpleinfo{
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+  grid-area: info;
+}
+.cumplename{
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+  grid-area: nombre;
+}.listobutton{
+  grid-area: listo;
+  font-size: 25px;
+  font-family: 'Gotham Medium', sans-serif;
+  color: white;
+  background:#000B7D;
+  cursor: pointer;
+  transition: 0.5s;
+  outline: none;
+  border: none;
+}
+.listobutton:hover{
+  background: #D7263D;
+}
+.explain{
+  color: #6c859e;
+  font-family: 'Gotham Rounded', sans-serif;
+  line-height: 1.2;
+  font-size: 30px;
+}
+.falsoDiv{
+  margin-top: 210px;
+  top: 0;
+  position: absolute;
+  background:#D7263D;
+  border-radius: 20px;
+  height: 10px;
+  padding: 20px;
+  display: none;
+  border-bottom-left-radius: 0px;
+}
+.falsoP{
+  font-family: 'Gotham Rounded', sans-serif;
 
+  margin-top: -5px;
+  color: white;
+}
 .templateCard{
   margin-left: 20px;
   margin-top: 10px;

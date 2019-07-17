@@ -18,3 +18,12 @@ font-family: 'Waltograph';
 Src: url('./fuentes/waltographUI.ttf');
 font-display: optional;
 }
+.footerSec{
+  position: absolute;
+  top: 0;
+  font-family: 'Gotham Rounded', sans-serif;
+  color: #D7263D;
+  margin-top: 580px;
+  font-size: 12px;
+  margin-left: 950px;
+}

@@ -8,6 +8,7 @@ import Boca from './Boca';
 import LogoIntro from './LogoIntro';
 import Amigurises from './Amigurises';
 
+
 function App() {
 
 
@@ -21,8 +22,11 @@ function App() {
         <Route path='/' exact component={Amigurises}/>
         <Route path='/app' component={Clash}/>
         <Route path='/boca' component={Boca}/>
+
     </Switch>
-        
+        <section className='footerSec'>
+          <p className='footerp'> Amigurises 2019 - creado por Broeders</p>
+        </section>
     </div>
     </Router>
   );

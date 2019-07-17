@@ -2,9 +2,14 @@ import React, { useState, useEffect } from "react";
 import "./css/Clash.css";
 import LowNav from "./LowNav";
 
+
+
 function Clash() {
   let imagen = document.getElementById("templateimg");
   let canvas = document.getElementById("canvas");
+  let falsoDiv = document.getElementById('falsodiv');
+  let falsoMsg = document.getElementById('falsop');
+
   let midata = {
     id: 0,
     imgUrl: "cumplepak.jpg",
@@ -53,6 +58,7 @@ function Clash() {
   const [secondCount, setSecondCount] = useState(0);
   const [finishLoad, setFinishLoad] = useState(false);
   const [msgRender, setMsgRender] = useState("");
+  const [isOkay, setIsOkay] = useState(false);
 
   const fetchData = e => {
     let dataname = e.target.getAttribute("data-value");
@@ -92,6 +98,19 @@ function Clash() {
     }, 300);
   }, [count]);
 
+  const showMision = (e) =>{
+
+    let mision = e.target.getAttribute('data-mision');
+    let coordY = e.clientY;
+    let coordX = e.clientX;
+    console.log(coordX);
+      falsoDiv.style.display = 'block';
+      falsoDiv.style.transform = `translateY(${coordY + 20}) translateX(${coordX})`;
+      falsoMsg.textContent = mision;
+  }
+  const hideMision = (e)=>{
+    falsoDiv.style.display = 'none';
+  }
   const handleSubmit = () => {
     makeCanvas();
   };
@@ -244,7 +263,8 @@ function Clash() {
     setImgData(imgfinal);
     setMsgRender("renderizando");
   };
-  const showData = () => {
+  const showData = (e) => {
+    e.preventDefault();
     if (cumpleañero === "") {
       setMsgError("Rellene todos los campos!");
       setMensajeh3(false);
@@ -295,60 +315,84 @@ function Clash() {
           </h1>
         )}
         <section className="estilos">
-          <form onKeyUp={handleSubmit} className="datosform">
-            <input
-              type="text"
-              className="inputEdad"
-              placeholder="10"
-              value={miEdad}
-              maxLength="2"
-              onChange={showEdad}
-            />
+        <h3 className='explain'>
+          Seleccioná una tarjeta de la colección y completala acá!
+        </h3>
+        <div className='falsoDiv' id='falsodiv'>
+          <p className='falsoP' id='falsop'> </p>
+        </div>
+        <form onKeyUp={handleSubmit} className="cumpleforma">
+          <input
+            type="text"
+            className="cumpleedad"
+            placeholder="10"
+            value={miEdad}
+            maxLength="2"
+            onChange={showEdad}
+            onMouseOver={showMision}
+            onMouseLeave={hideMision}
+            data-mision='Aca va la edad!'
+          />
 
-            <input
-              type="text"
-              className="inputFecha"
-              placeholder="03/12/19"
-              value={fecha}
-              onChange={showFecha}
-            />
+          <input
+            type="text"
+            className="cumplefecha"
+            placeholder="03/12/19"
+            value={fecha}
+            onChange={showFecha}
+            onMouseOver={showMision}
+            data-mision='aca la fecha'
+            onMouseLeave={hideMision}
+          />
 
-            <input
-              type="text"
-              className="inputHorario"
-              placeholder="18 a 21 hs"
-              maxLength="10"
-              value={horario}
-              onChange={showHorario}
-            />
+          <input
+            type="text"
+            className="cumplehorario"
+            placeholder="18 a 21 hs"
+            maxLength="10"
+            value={horario}
+            onChange={showHorario}
+            onMouseOver={showMision}
+            data-mision='aca la hora'
+            onMouseLeave={hideMision}
+          />
 
-            <input
-              type="text"
-              className="inputLugar"
-              placeholder="dirección"
-              value={lugar}
-              onChange={showLugar}
-            />
-            <input
-              type="text"
-              placeholder="+ info"
-              className="inputInfo"
-              value={infoplus}
-              onChange={showMasInfo}
-            />
-            <input
-              type="text"
-              placeholder="mi nombre es"
-              className="inputCumple"
-              value={cumpleañero}
-              onChange={showCumple}
-            />
-          </form>
-
-          <button onClick={showData} className="btndescarga">
+          <input
+            type="text"
+            className="cumplelugar"
+            placeholder="dirección"
+            value={lugar}
+            onChange={showLugar}
+            onMouseOver={showMision}
+            data-mision='aca la dire'
+            onMouseLeave={hideMision}
+          />
+          <input
+            type="text"
+            placeholder="+ info"
+            className="cumpleinfo"
+            value={infoplus}
+            onChange={showMasInfo}
+            onMouseOver={showMision}
+            data-mision='aca si falta algo'
+            onMouseLeave={hideMision}
+          />
+          <input
+            type="text"
+            placeholder="mi nombre es"
+            className="cumplename"
+            value={cumpleañero}
+            onChange={showCumple}
+            onMouseOver={showMision}
+            data-mision='y aca el nombre '
+            onMouseLeave={hideMision}
+          />
+          <button onClick={showData} className="listobutton">
             {" "}
             Listo !{" "}
           </button>
+        </form>
+
 
           <h3 className={mensajeh3 ? "pantallaok" : "pantallanotok"}>
             {" "}
@@ -356,7 +400,7 @@ function Clash() {
           </h3>
         </section>
       </section>
-    
+
     </div>
   );
 }
