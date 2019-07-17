@@ -5,6 +5,10 @@
 font-family: 'Gotham Medium';
 Src: url('../fuentes/GothamMedium.ttf');
 }
+@keyframes aparecer {
+  from{opacity: 0; transform: scale(0.8);}
+  to{opacity: 1; transform: scale(1);}
+}
 .lowNavBar{
   margin-left: 500px;
   margin-top: -50px;
@@ -30,6 +34,10 @@ Src: url('../fuentes/GothamMedium.ttf');
   font-family: 'Gotham Medium', sans-serif;
   cursor: pointer;
   user-select: none;
+  animation-name: aparecer;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
 }
 #barra{
 
@@ -80,7 +88,7 @@ Src: url('../fuentes/GothamMedium.ttf');
 }
 
 .formContainer{
-  
+
   justify-content: center;
   justify-items: center;
   position: fixed;
