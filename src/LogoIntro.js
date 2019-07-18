@@ -14,7 +14,7 @@ function LogoIntro(props){
 
   return(
     <div className={clase}>
-      <img src='img/amigurises7.png' className='logoamigo' />
+      <img src='img/amigurises777.png' className='logoamigo' />
       <img src='img/puff.svg' className='loaderpuff' />
       <div>
       <p className='invisible'> supercell </p>

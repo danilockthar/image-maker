@@ -20,7 +20,7 @@ Src: url('../fuentes/GothamMedium.ttf');
 
 
 .showTemps{
-  margin-top: -15px;
+  margin-top: -17px;
   outline: none;
   width: 100px;
   height: 40px;
@@ -62,7 +62,7 @@ Src: url('../fuentes/GothamMedium.ttf');
   background: #f94444;
 }
 .barradiv{
-  margin-top: 20px;
+  margin-top: 19px;
   margin-left: -5px;
 }
 
