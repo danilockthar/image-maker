@@ -79,7 +79,7 @@ function LowNav(props) {
     if (!toggle) {
       console.log("true");
       setToggle(true);
-      hidden.style.height = "92vh";
+      hidden.style.height = "90vh";
       barra.style.transform = "rotate(40deg)";
       barra.style.transformOrigin = "top left";
       barrab.style.transform = "translateX(-300px)";

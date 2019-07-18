@@ -8,13 +8,13 @@ function LogoIntro(props){
   useEffect(()=>{
     const timer = setTimeout(()=>{
       setClase('desaparecer');
-    },1000);
+    },2000);
 
   })
 
   return(
     <div className={clase}>
-      <img src='img/amigurises2.png' className='logoamigo' />
+      <img src='img/amigurises7.png' className='logoamigo' />
       <img src='img/puff.svg' className='loaderpuff' />
       <div>
       <p className='invisible'> supercell </p>

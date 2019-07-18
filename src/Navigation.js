@@ -7,7 +7,7 @@ function Navigation(props) {
     <div className='navigation'>
       <nav>
         <NavLink to='/' className="Linktags">
-        <img src='img/amigurises2.png' className='logoimg' />
+        <img src='img/amigurises7.png' className='logoimg' />
         </NavLink>
         <div className="mislinks">
         <NavLink exact to='/' className="Linktags" activeClassName="selected">

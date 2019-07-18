@@ -266,7 +266,9 @@ function Clash() {
   const showData = (e) => {
     e.preventDefault();
     if (cumpleañero === "") {
-      setMsgError("Rellene todos los campos!");
+      falsoDiv.style.display = 'block';
+      falsoMsg.textContent = "Rellene todos los campos!";
+      
       setMensajeh3(false);
     } else {
       const link = document.createElement("a");
@@ -275,7 +277,9 @@ function Clash() {
       link.href = rawImage;
       link.download = `cumple-de-${cumpleañero}.jpg`;
       link.click();
-      setMsgError(`cumple-de-${cumpleañero}.jpg ha sido descargado con exito!`);
+      falsoDiv.style.display = 'block';
+      falsoMsg.textContent = "Tarjeta descargada!";
+
       setMensajeh3(true);
     }
   };
@@ -316,8 +320,9 @@ function Clash() {
         )}
         <section className="estilos">
         <h3 className='explain'>
-          Seleccioná una tarjeta de la colección y completala acá!
+          Seleccioná una tarjeta de la colección para empezar!
         </h3>
+        <img src='img/letterlogo2.png' className='letterLogo' />
         <div className='falsoDiv' id='falsodiv'>
           <p className='falsoP' id='falsop'> </p>
         </div>
@@ -341,7 +346,7 @@ function Clash() {
             value={fecha}
             onChange={showFecha}
             onMouseOver={showMision}
-            data-mision='aca la fecha'
+            data-mision='Aca la fecha!'
             onMouseLeave={hideMision}
           />
 
@@ -353,7 +358,7 @@ function Clash() {
             value={horario}
             onChange={showHorario}
             onMouseOver={showMision}
-            data-mision='aca la hora'
+            data-mision='Aca la hora!'
             onMouseLeave={hideMision}
           />
 
@@ -364,7 +369,7 @@ function Clash() {
             value={lugar}
             onChange={showLugar}
             onMouseOver={showMision}
-            data-mision='aca la dire'
+            data-mision='Aca la dire!'
             onMouseLeave={hideMision}
           />
           <input
@@ -374,7 +379,7 @@ function Clash() {
             value={infoplus}
             onChange={showMasInfo}
             onMouseOver={showMision}
-            data-mision='aca si falta algo'
+            data-mision='Aca si falta algo!'
             onMouseLeave={hideMision}
           />
           <input
@@ -384,7 +389,7 @@ function Clash() {
             value={cumpleañero}
             onChange={showCumple}
             onMouseOver={showMision}
-            data-mision='y aca el nombre '
+            data-mision='Y aca el nombre! '
             onMouseLeave={hideMision}
           />
           <button onClick={showData} className="listobutton">

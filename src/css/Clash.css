@@ -19,7 +19,7 @@
   grid-template-rows: 60px 60px 60px 60px;
   color : #D7263D;
   font-family: 'Gotham Medium', sans-serif;
-  margin-top: 70px;
+  margin-top: 110px;
 }
 .cumpleforma input[type=text]{
   padding: 5px;
@@ -79,9 +79,18 @@
   font-family: 'Gotham Rounded', sans-serif;
   line-height: 1.2;
   font-size: 30px;
+  margin-top: -20px;
+}
+.letterLogo{
+  position: absolute;
+  margin-top: 10px;
+  width: 70px;
+
 }
 .falsoDiv{
-  margin-top: 210px;
+  border: 2px solid gold;
+  margin-left: 80px;
+  margin-top: 150px;
   top: 0;
   position: absolute;
   background:#D7263D;
