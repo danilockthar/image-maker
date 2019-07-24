@@ -18,7 +18,7 @@ function LowNav(props) {
 
   const fetchData = () => {
     setIsLoading(true);
-    fetch("http://www.broeders.com.ar/includes/categorias.php", {
+    fetch("https://interdictory-sinks.000webhostapp.com/includes/categorias.php", {
       method: "POST",
       headers: new Headers({
         "Content-Type": "application/x-www-form-urlencoded"

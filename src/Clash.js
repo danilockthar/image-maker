@@ -65,7 +65,7 @@ function Clash() {
     console.log(dataname);
     setFinishLoad(false);
     setIsLoading(true);
-    fetch("http://www.broeders.com.ar/includes/templates.php", {
+    fetch("https://interdictory-sinks.000webhostapp.com/includes/templates.php", {
       method: "POST",
       headers: new Headers({
         "Content-Type": "application/x-www-form-urlencoded"
@@ -268,7 +268,7 @@ function Clash() {
     if (cumpleañero === "") {
       falsoDiv.style.display = 'block';
       falsoMsg.textContent = "Rellene todos los campos!";
-      
+
       setMensajeh3(false);
     } else {
       const link = document.createElement("a");

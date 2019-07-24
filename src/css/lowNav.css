@@ -20,7 +20,7 @@ Src: url('../fuentes/GothamMedium.ttf');
 
 
 .showTemps{
-  margin-top: -17px;
+  margin-top: 4px;
   outline: none;
   width: 100px;
   height: 40px;
@@ -67,7 +67,7 @@ Src: url('../fuentes/GothamMedium.ttf');
 }
 
 #hiddenDiv{
-  margin-top: -50px;
+  margin-top: -30px;
   overflow-y: scroll;
   z-index: 3;
   transition: 0.4s;
