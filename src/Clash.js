@@ -65,13 +65,7 @@ function Clash() {
     console.log(dataname);
     setFinishLoad(false);
     setIsLoading(true);
-    fetch("https://interdictory-sinks.000webhostapp.com/includes/templates.php", {
-      method: "POST",
-      headers: new Headers({
-        "Content-Type": "application/x-www-form-urlencoded"
-      }),
-      body: "imgTagName=" + dataname
-    })
+    fetch("https://interdictory-sinks.000webhostapp.com/includes/templates.php?imgTagName="+dataname)
       .then(response => response.json())
       .then(json => {
         data = json;
