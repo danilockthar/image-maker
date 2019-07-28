@@ -14,6 +14,7 @@ function App() {
 
 
   return (
+
     <Router>
     <LogoIntro />
     <div className="App">
@@ -29,6 +30,7 @@ function App() {
         </section>
     </div>
     </Router>
+    
   );
 }
 

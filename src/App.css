@@ -27,3 +27,19 @@ font-display: optional;
   font-size: 12px;
   margin-left: 950px;
 }
+@media screen and (max-width: 800px) {
+
+  .App{
+
+    min-width: 645px;
+  }
+  .footerSec{
+      display: none;
+    margin-top: 1000px;
+    margin-left: 400px;
+  }
+  .footerp{
+    
+    font-size: 10px;
+  }
+}
